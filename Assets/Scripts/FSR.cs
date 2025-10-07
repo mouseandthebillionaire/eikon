@@ -5,6 +5,8 @@ public class FSR : MonoBehaviour
 {
     [Header("Sensor Configuration")]
     [SerializeField] private int sensorId = 0;
+    [Range(0f, 1f)]
+    [SerializeField] public float force = 0f;
     [SerializeField] public float timeHeld = 0f;
     
     [Header("Animation")]
@@ -96,7 +98,8 @@ public class FSR : MonoBehaviour
     {
         currentData = newData;
         lastValue = newData.normalizedValue;
-    
+        // force = newData.normalizedValue;
+
         
         OnFSRValueChanged?.Invoke(this, newData);
     }
@@ -134,7 +137,7 @@ public class FSR : MonoBehaviour
     {
         if (isActive)
         {
-            timeHeld += Time.deltaTime;
+            timeHeld += (force * Time.deltaTime);
         } else {
             if(timeHeld > 0f) {
                 timeHeld -= Time.deltaTime;

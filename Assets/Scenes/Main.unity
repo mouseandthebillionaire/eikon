@@ -1363,6 +1363,10 @@ PrefabInstance:
       value: FSR
       objectReference: {fileID: 0}
     - target: {fileID: 2507741921347596525, guid: 126ca95b9c6e74387ae2ac36f561ffcf, type: 3}
+      propertyPath: force
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2507741921347596525, guid: 126ca95b9c6e74387ae2ac36f561ffcf, type: 3}
       propertyPath: testKey
       value: 113
       objectReference: {fileID: 0}
