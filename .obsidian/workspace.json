@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Process/Journal.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Journal"
+              "title": "README"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Process/Journal.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Journal"
+              "title": "Backlinks for README"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Process/Journal.md",
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Journal"
+              "title": "Outgoing links from README"
             }
           },
           {
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Process/Journal.md",
+                "file": "README.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Journal"
+              "title": "Outline of README"
             }
           }
         ]
@@ -171,18 +171,17 @@
   },
   "active": "f45619208928840c",
   "lastOpenFiles": [
-    "Temp/ADB-Refresh5796160ff99d4422a94948c456d7881e",
-    "Temp/ADB-Refreshe55a8a79a43614c43a25d9a8129f93ad",
-    "Temp/ADB-Refresh71ac646a046f24cc482776a5f3b9713b",
-    "Temp/ADB-Refresh09cdf46fc26584621bbcb6a497b10f9d",
-    "Temp/ADB-Refresha59855e837af74a1fb34aba2abc90ed4",
-    "Temp/Burst/burst-aotwe2y4uod.ra2",
-    "Temp/Burst/burst-aotgl367jvo.ydy",
-    "Temp/Burst/burst-aot7c0ia4jg.fs7",
-    "Temp/Burst/burst-aotzbb17mac.zjl",
-    "Temp/Burst/burst-aotyp81fh3o.9nv",
-    "Temp/Burst/burst-aotqrofe8me.p1g",
-    "README.md",
-    "Process/Journal.md"
+    "Process/Journal.md",
+    "Temp/ADB-Refreshe7c49922ea07a41a69c35f22901331b3",
+    "Temp/ADB-Refresh05fb2dcd6300447da8204d9720da79b7",
+    "Temp/ADB-Refresh08877511c83614c03b5402c28fa680f5",
+    "Temp/Burst/burst-aoto1m0ub54.2xu",
+    "Temp/Burst/burst-aotp9nc6m74.l96",
+    "Temp/Burst/burst-aota86m5dph.2hi",
+    "Temp/Burst/burst-aot64zxraul.dii",
+    "Temp/Burst/burst-aotqm78xkx7.2zs",
+    "Temp/Burst/burst-aot01tin7g7.w70",
+    "Temp/Burst/burst-aotxgwv39j9.4ve",
+    "README.md"
   ]
 }
