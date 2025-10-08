@@ -1,5 +1,43 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9075011953537615180
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acf651632ce59b84885e79d1736581be, type: 3}
+  m_Name: Distortion_9
+  m_EditorClassIdentifier: 
+  active: 1
+  enable:
+    m_OverrideState: 1
+    m_Value: 0
+  fade:
+    m_OverrideState: 1
+    m_Value: 0
+  maximumImages:
+    m_OverrideState: 1
+    m_Value: 1
+  speed:
+    m_OverrideState: 1
+    m_Value: 0.5
+  mask:
+    m_OverrideState: 1
+    m_Value: {fileID: 0}
+    dimension: 1
+  maskChannel:
+    m_OverrideState: 1
+    m_Value: 0
+  maskEdgeFineTuning:
+    m_OverrideState: 1
+    m_Value: 0.15
+  GlobalPostProcessingSettings:
+    m_OverrideState: 1
+    m_Value: 0
 --- !u!114 &-8186968272690591729
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -214,6 +252,50 @@ MonoBehaviour:
   texture:
     m_OverrideState: 1
     m_Value: {fileID: 0}
+--- !u!114 &-7053922160922129442
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29048448a70aa6949b37f4d658c0ebc7, type: 3}
+  m_Name: Distortion_2
+  m_EditorClassIdentifier: 
+  active: 1
+  enable:
+    m_OverrideState: 1
+    m_Value: 0
+  fade:
+    m_OverrideState: 1
+    m_Value: 0
+  DisplaceMode:
+    m_OverrideState: 1
+    m_Value: 0
+  size:
+    m_OverrideState: 1
+    m_Value: 64
+  thikness:
+    m_OverrideState: 1
+    m_Value: 1
+  speed:
+    m_OverrideState: 1
+    m_Value: 1
+  mask:
+    m_OverrideState: 1
+    m_Value: {fileID: 0}
+    dimension: 1
+  maskChannel:
+    m_OverrideState: 1
+    m_Value: 0
+  maskEdgeFineTuning:
+    m_OverrideState: 1
+    m_Value: 0.15
+  GlobalPostProcessingSettings:
+    m_OverrideState: 1
+    m_Value: 0
 --- !u!114 &-6951754464447674219
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -248,6 +330,317 @@ MonoBehaviour:
   highlightsEnd:
     m_OverrideState: 1
     m_Value: 1
+--- !u!114 &-6694944027243775911
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 473525764cfb24c478506d91f2d7dab8, type: 3}
+  m_Name: LimitlessGlitch9
+  m_EditorClassIdentifier: 
+  active: 1
+  enable:
+    m_OverrideState: 1
+    m_Value: 0
+  fade:
+    m_OverrideState: 1
+    m_Value: 0
+  amount:
+    m_OverrideState: 1
+    m_Value: 0.2
+  randomActivateAmount:
+    m_OverrideState: 1
+    m_Value: 0.9
+  size:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1}
+  light:
+    m_OverrideState: 1
+    m_Value: 0
+  mask:
+    m_OverrideState: 1
+    m_Value: {fileID: 0}
+    dimension: 1
+  maskChannel:
+    m_OverrideState: 1
+    m_Value: 0
+  maskEdgeFineTuning:
+    m_OverrideState: 1
+    m_Value: 0.15
+  GlobalPostProcessingSettings:
+    m_OverrideState: 1
+    m_Value: 0
+--- !u!114 &-6217260133349844175
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4855cad5f7da5a44d9f55f73408a4750, type: 3}
+  m_Name: LimitlessGlitch14
+  m_EditorClassIdentifier: 
+  active: 1
+  enable:
+    m_OverrideState: 1
+    m_Value: 0
+  stop:
+    m_OverrideState: 1
+    m_Value: 0
+  fade:
+    m_OverrideState: 1
+    m_Value: 0
+  amount:
+    m_OverrideState: 1
+    m_Value: 1.5
+  speed:
+    m_OverrideState: 1
+    m_Value: 4
+  RandomActivationSpeed:
+    m_OverrideState: 1
+    m_Value: 0.2
+  randomActivateAmount:
+    m_OverrideState: 1
+    m_Value: 0.75
+  mask:
+    m_OverrideState: 1
+    m_Value: {fileID: 0}
+    dimension: 1
+  maskChannel:
+    m_OverrideState: 1
+    m_Value: 0
+  maskEdgeFineTuning:
+    m_OverrideState: 1
+    m_Value: 0.15
+  GlobalPostProcessingSettings:
+    m_OverrideState: 1
+    m_Value: 0
+--- !u!114 &-6103292091155586705
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bba514a314b5dcd45a0ced5fe2de779b, type: 3}
+  m_Name: LimitlessGlitch11
+  m_EditorClassIdentifier: 
+  active: 1
+  enable:
+    m_OverrideState: 1
+    m_Value: 0
+  fade:
+    m_OverrideState: 1
+    m_Value: 0
+  amount:
+    m_OverrideState: 1
+    m_Value: 0
+  Noise:
+    m_OverrideState: 1
+    m_Value: 1
+  linesAmount:
+    m_OverrideState: 1
+    m_Value: 1
+  speed:
+    m_OverrideState: 1
+    m_Value: 1
+  mask:
+    m_OverrideState: 1
+    m_Value: {fileID: 0}
+    dimension: 1
+  maskChannel:
+    m_OverrideState: 1
+    m_Value: 0
+  maskEdgeFineTuning:
+    m_OverrideState: 1
+    m_Value: 0.15
+  GlobalPostProcessingSettings:
+    m_OverrideState: 1
+    m_Value: 0
+--- !u!114 &-5908628298700201813
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8682c764501662d4989b773894168582, type: 3}
+  m_Name: Distortion_10
+  m_EditorClassIdentifier: 
+  active: 1
+  enable:
+    m_OverrideState: 1
+    m_Value: 0
+  Intensity:
+    m_OverrideState: 1
+    m_Value: 0
+  Frequency:
+    m_OverrideState: 1
+    m_Value: 64
+  Speed:
+    m_OverrideState: 1
+    m_Value: 0.5
+  center:
+    m_OverrideState: 1
+    m_Value: {x: 0, y: 0}
+  mask:
+    m_OverrideState: 1
+    m_Value: {fileID: 0}
+    dimension: 1
+  maskChannel:
+    m_OverrideState: 1
+    m_Value: 0
+  maskEdgeFineTuning:
+    m_OverrideState: 1
+    m_Value: 0.15
+  GlobalPostProcessingSettings:
+    m_OverrideState: 1
+    m_Value: 0
+--- !u!114 &-5268210721558400802
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f044f3f7369c37439934cb0e1904aac, type: 3}
+  m_Name: LimitlessGlitch13
+  m_EditorClassIdentifier: 
+  active: 1
+  enable:
+    m_OverrideState: 1
+    m_Value: 0
+  stop:
+    m_OverrideState: 1
+    m_Value: 0
+  fade:
+    m_OverrideState: 1
+    m_Value: 0
+  linesWidth:
+    m_OverrideState: 1
+    m_Value: 0.15
+  LinesAmount:
+    m_OverrideState: 1
+    m_Value: 0.15
+  offset:
+    m_OverrideState: 1
+    m_Value: 0.15
+  randomActivateAmount:
+    m_OverrideState: 1
+    m_Value: 0.9
+  speed:
+    m_OverrideState: 1
+    m_Value: 3
+  mask:
+    m_OverrideState: 1
+    m_Value: {fileID: 0}
+    dimension: 1
+  maskChannel:
+    m_OverrideState: 1
+    m_Value: 0
+  maskEdgeFineTuning:
+    m_OverrideState: 1
+    m_Value: 0.15
+  GlobalPostProcessingSettings:
+    m_OverrideState: 1
+    m_Value: 0
+--- !u!114 &-4802823912372606999
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cbe5c6ccf7a42047a88955a3b1e35f5, type: 3}
+  m_Name: Distortion_5
+  m_EditorClassIdentifier: 
+  active: 1
+  enable:
+    m_OverrideState: 1
+    m_Value: 0
+  amount:
+    m_OverrideState: 1
+    m_Value: 0
+  size:
+    m_OverrideState: 1
+    m_Value: 0.056
+  speed:
+    m_OverrideState: 1
+    m_Value: 1
+  fade:
+    m_OverrideState: 1
+    m_Value: 1
+  mask:
+    m_OverrideState: 1
+    m_Value: {fileID: 0}
+    dimension: 1
+  maskChannel:
+    m_OverrideState: 1
+    m_Value: 0
+  maskEdgeFineTuning:
+    m_OverrideState: 1
+    m_Value: 0.15
+  GlobalPostProcessingSettings:
+    m_OverrideState: 1
+    m_Value: 0
+--- !u!114 &-4229895819375714023
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e3c70d62a7ad464887a68e38ecf6835, type: 3}
+  m_Name: LimitlessGlitch8
+  m_EditorClassIdentifier: 
+  active: 1
+  enable:
+    m_OverrideState: 1
+    m_Value: 0
+  Amount:
+    m_OverrideState: 1
+    m_Value: 0
+  LinesWidth:
+    m_OverrideState: 1
+    m_Value: 1
+  Speed:
+    m_OverrideState: 1
+    m_Value: 1
+  Offset:
+    m_OverrideState: 1
+    m_Value: 1
+  unscaledTime:
+    m_OverrideState: 1
+    m_Value: 0
+  mask:
+    m_OverrideState: 1
+    m_Value: {fileID: 0}
+    dimension: 1
+  maskChannel:
+    m_OverrideState: 1
+    m_Value: 0
+  maskEdgeFineTuning:
+    m_OverrideState: 1
+    m_Value: 0.15
+  GlobalPostProcessingSettings:
+    m_OverrideState: 1
+    m_Value: 0
 --- !u!114 &-4210620904635426390
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -403,6 +796,95 @@ MonoBehaviour:
   bladeRotation:
     m_OverrideState: 1
     m_Value: 0
+--- !u!114 &-2454051374050400210
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2bd335b2a053ac4dba080dfcbda37a1, type: 3}
+  m_Name: LimitlessGlitch19
+  m_EditorClassIdentifier: 
+  active: 1
+  enable:
+    m_OverrideState: 1
+    m_Value: 0
+  NoiseTexture:
+    m_OverrideState: 1
+    m_Value: {fileID: 0}
+    dimension: 1
+  fade:
+    m_OverrideState: 1
+    m_Value: 0
+  stop:
+    m_OverrideState: 1
+    m_Value: 0
+  ShiftSeed:
+    m_OverrideState: 1
+    m_Value: 16
+  speed:
+    m_OverrideState: 1
+    m_Value: 0.11
+  amplitude:
+    m_OverrideState: 1
+    m_Value: 0.1
+  randomActivateAmount:
+    m_OverrideState: 1
+    m_Value: 0.9
+  mask:
+    m_OverrideState: 1
+    m_Value: {fileID: 0}
+    dimension: 1
+  maskChannel:
+    m_OverrideState: 1
+    m_Value: 0
+  maskEdgeFineTuning:
+    m_OverrideState: 1
+    m_Value: 0.15
+  GlobalPostProcessingSettings:
+    m_OverrideState: 1
+    m_Value: 0
+--- !u!114 &-1950574072057941040
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fccc8c5358c9da40ac58ac04c169018, type: 3}
+  m_Name: Distortion_7
+  m_EditorClassIdentifier: 
+  active: 1
+  enable:
+    m_OverrideState: 1
+    m_Value: 0
+  amount:
+    m_OverrideState: 1
+    m_Value: 0
+  size:
+    m_OverrideState: 1
+    m_Value: 10
+  speed:
+    m_OverrideState: 1
+    m_Value: 1
+  mask:
+    m_OverrideState: 1
+    m_Value: {fileID: 0}
+    dimension: 1
+  maskChannel:
+    m_OverrideState: 1
+    m_Value: 0
+  maskEdgeFineTuning:
+    m_OverrideState: 1
+    m_Value: 0.15
+  GlobalPostProcessingSettings:
+    m_OverrideState: 1
+    m_Value: 0
 --- !u!114 &-1083910812058648046
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -449,6 +931,94 @@ MonoBehaviour:
   worldOffset:
     m_OverrideState: 1
     m_Value: {x: 0, y: 0, z: 0}
+--- !u!114 &-690751971721412757
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1e3abb0122cec442ab715ac7a504048, type: 3}
+  m_Name: Distortion_1
+  m_EditorClassIdentifier: 
+  active: 1
+  enable:
+    m_OverrideState: 1
+    m_Value: 0
+  intensity:
+    m_OverrideState: 1
+    m_Value: 0
+  CenterFocus:
+    m_OverrideState: 1
+    m_Value: 0
+  CubicNoise:
+    m_OverrideState: 1
+    m_Value: 0
+  size:
+    m_OverrideState: 1
+    m_Value: 0.6
+  speed:
+    m_OverrideState: 1
+    m_Value: 1
+  mask:
+    m_OverrideState: 1
+    m_Value: {fileID: 0}
+    dimension: 1
+  maskChannel:
+    m_OverrideState: 1
+    m_Value: 0
+  maskEdgeFineTuning:
+    m_OverrideState: 1
+    m_Value: 0.15
+  GlobalPostProcessingSettings:
+    m_OverrideState: 1
+    m_Value: 0
+--- !u!114 &-492834144717138978
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 626f01b573819c44996f56ae5014db91, type: 3}
+  m_Name: LimitlessGlitch16
+  m_EditorClassIdentifier: 
+  active: 1
+  enable:
+    m_OverrideState: 1
+    m_Value: 0
+  stop:
+    m_OverrideState: 1
+    m_Value: 0
+  fade:
+    m_OverrideState: 1
+    m_Value: 0
+  amount:
+    m_OverrideState: 1
+    m_Value: 21
+  speed:
+    m_OverrideState: 1
+    m_Value: 0.2
+  randomActivateAmount:
+    m_OverrideState: 1
+    m_Value: 0.75
+  mask:
+    m_OverrideState: 1
+    m_Value: {fileID: 0}
+    dimension: 1
+  maskChannel:
+    m_OverrideState: 1
+    m_Value: 0
+  maskEdgeFineTuning:
+    m_OverrideState: 1
+    m_Value: 0.15
+  GlobalPostProcessingSettings:
+    m_OverrideState: 1
+    m_Value: 0
 --- !u!114 &-277880470225475626
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -506,6 +1076,39 @@ MonoBehaviour:
   - {fileID: -8186968272690591729}
   - {fileID: -3978695733392391637}
   - {fileID: -1083910812058648046}
+  - {fileID: 686095510920654871}
+  - {fileID: 3749673954275435878}
+  - {fileID: 7847247344851824293}
+  - {fileID: -4229895819375714023}
+  - {fileID: 6180575009138572700}
+  - {fileID: 2222809414952679737}
+  - {fileID: 7014129074209260988}
+  - {fileID: 4988134765697539497}
+  - {fileID: 2983022905074690680}
+  - {fileID: -690751971721412757}
+  - {fileID: -492834144717138978}
+  - {fileID: -6694944027243775911}
+  - {fileID: 7994143669609232482}
+  - {fileID: 4792598760953689535}
+  - {fileID: 1814421210848978099}
+  - {fileID: 2938517335391551973}
+  - {fileID: -5908628298700201813}
+  - {fileID: -7053922160922129442}
+  - {fileID: 8966621191604839680}
+  - {fileID: 9082991650364262261}
+  - {fileID: -2454051374050400210}
+  - {fileID: -9075011953537615180}
+  - {fileID: 6466966701952769785}
+  - {fileID: -6103292091155586705}
+  - {fileID: -6217260133349844175}
+  - {fileID: 1901876879506298729}
+  - {fileID: 2643861083799010197}
+  - {fileID: 7974103344028936037}
+  - {fileID: -5268210721558400802}
+  - {fileID: 6269565682212810243}
+  - {fileID: 3001372350885850771}
+  - {fileID: -1950574072057941040}
+  - {fileID: -4802823912372606999}
 --- !u!114 &156332030701414761
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -528,6 +1131,50 @@ MonoBehaviour:
   gain:
     m_OverrideState: 1
     m_Value: {x: 1, y: 1, z: 1, w: 0}
+--- !u!114 &686095510920654871
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59f14c19c43772f4ca126fde571ce638, type: 3}
+  m_Name: LimitlessGlitch20
+  m_EditorClassIdentifier: 
+  active: 1
+  enable:
+    m_OverrideState: 1
+    m_Value: 0
+  fade:
+    m_OverrideState: 1
+    m_Value: 0
+  stop:
+    m_OverrideState: 1
+    m_Value: 0
+  strength:
+    m_OverrideState: 1
+    m_Value: 0.065
+  speed:
+    m_OverrideState: 1
+    m_Value: 85
+  randomActivateAmount:
+    m_OverrideState: 1
+    m_Value: 0.75
+  mask:
+    m_OverrideState: 1
+    m_Value: {fileID: 0}
+    dimension: 1
+  maskChannel:
+    m_OverrideState: 1
+    m_Value: 0
+  maskEdgeFineTuning:
+    m_OverrideState: 1
+    m_Value: 0.15
+  GlobalPostProcessingSettings:
+    m_OverrideState: 1
+    m_Value: 0
 --- !u!114 &1247868777620691934
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -568,6 +1215,120 @@ MonoBehaviour:
   maxNits:
     m_OverrideState: 1
     m_Value: 1000
+--- !u!114 &1814421210848978099
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34543c025a8a30649abd1d949a68db88, type: 3}
+  m_Name: LimitlessGlitch10
+  m_EditorClassIdentifier: 
+  active: 1
+  enable:
+    m_OverrideState: 1
+    m_Value: 0
+  width:
+    m_OverrideState: 1
+    m_Value: 0.3
+  fade:
+    m_OverrideState: 1
+    m_Value: 0
+  mask:
+    m_OverrideState: 1
+    m_Value: {fileID: 0}
+    dimension: 1
+  maskChannel:
+    m_OverrideState: 1
+    m_Value: 0
+  maskEdgeFineTuning:
+    m_OverrideState: 1
+    m_Value: 0.15
+  GlobalPostProcessingSettings:
+    m_OverrideState: 1
+    m_Value: 0
+--- !u!114 &1901876879506298729
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 490f739a8d0cca341ba886c4819a2841, type: 3}
+  m_Name: Limitless_Glitch21
+  m_EditorClassIdentifier: 
+  active: 1
+  enable:
+    m_OverrideState: 1
+    m_Value: 0
+  range:
+    m_OverrideState: 1
+    m_Value: 0.05
+  noiseQuality:
+    m_OverrideState: 1
+    m_Value: 250
+  noiseIntensity:
+    m_OverrideState: 1
+    m_Value: 0
+  offsetIntensity:
+    m_OverrideState: 1
+    m_Value: 0
+  colorOffsetIntensity:
+    m_OverrideState: 1
+    m_Value: 0
+  mask:
+    m_OverrideState: 1
+    m_Value: {fileID: 0}
+    dimension: 1
+  maskChannel:
+    m_OverrideState: 1
+    m_Value: 0
+  maskEdgeFineTuning:
+    m_OverrideState: 1
+    m_Value: 0.15
+  GlobalPostProcessingSettings:
+    m_OverrideState: 1
+    m_Value: 0
+--- !u!114 &2222809414952679737
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a6edf2f8aaa7a147b76a597b5c7cd95, type: 3}
+  m_Name: LimitlessGlitch15
+  m_EditorClassIdentifier: 
+  active: 1
+  enable:
+    m_OverrideState: 1
+    m_Value: 0
+  dropoutIntensity:
+    m_OverrideState: 1
+    m_Value: 0
+  interlaceIntesnsity:
+    m_OverrideState: 1
+    m_Value: 0
+  mask:
+    m_OverrideState: 1
+    m_Value: {fileID: 0}
+    dimension: 1
+  maskChannel:
+    m_OverrideState: 1
+    m_Value: 0
+  maskEdgeFineTuning:
+    m_OverrideState: 1
+    m_Value: 0.15
+  GlobalPostProcessingSettings:
+    m_OverrideState: 1
+    m_Value: 0
 --- !u!114 &2332282131777942337
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -635,6 +1396,176 @@ MonoBehaviour:
   tint:
     m_OverrideState: 1
     m_Value: 0
+--- !u!114 &2643861083799010197
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92daa5b70632645848cb7b95d6eee444, type: 3}
+  m_Name: LimitlessGlitch4
+  m_EditorClassIdentifier: 
+  active: 1
+  enable:
+    m_OverrideState: 1
+    m_Value: 0
+  amount:
+    m_OverrideState: 1
+    m_Value: 0
+  interval:
+    m_OverrideState: 1
+    m_Value: 1
+  rate:
+    m_OverrideState: 1
+    m_Value: 1
+  RGBSplit:
+    m_OverrideState: 1
+    m_Value: 1
+  speed:
+    m_OverrideState: 1
+    m_Value: 1
+  customResolution:
+    m_OverrideState: 1
+    m_Value: 0
+  resolution:
+    m_OverrideState: 1
+    m_Value: {x: 640, y: 480}
+  mask:
+    m_OverrideState: 1
+    m_Value: {fileID: 0}
+    dimension: 1
+  maskChannel:
+    m_OverrideState: 1
+    m_Value: 0
+  maskEdgeFineTuning:
+    m_OverrideState: 1
+    m_Value: 0.15
+  GlobalPostProcessingSettings:
+    m_OverrideState: 1
+    m_Value: 0
+--- !u!114 &2938517335391551973
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83df3401ff8e29c468eb3b1c45b7ebae, type: 3}
+  m_Name: CustomTexV
+  m_EditorClassIdentifier: 
+  active: 1
+  enable:
+    m_OverrideState: 1
+    m_Value: 0
+  texture:
+    m_OverrideState: 1
+    m_Value: {fileID: 0}
+    dimension: 1
+  fade:
+    m_OverrideState: 1
+    m_Value: 1
+  GlobalPostProcessingSettings:
+    m_OverrideState: 1
+    m_Value: 0
+--- !u!114 &2983022905074690680
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33d773c43cd3a96489e482dc86a93b4e, type: 3}
+  m_Name: LimitlessGlitch12
+  m_EditorClassIdentifier: 
+  active: 1
+  enable:
+    m_OverrideState: 1
+    m_Value: 0
+  stop:
+    m_OverrideState: 1
+    m_Value: 0
+  fade:
+    m_OverrideState: 1
+    m_Value: 0
+  amount:
+    m_OverrideState: 1
+    m_Value: 0
+  randomActivateAmount:
+    m_OverrideState: 1
+    m_Value: 0.9
+  size:
+    m_OverrideState: 1
+    m_Value: 16
+  mask:
+    m_OverrideState: 1
+    m_Value: {fileID: 0}
+    dimension: 1
+  maskChannel:
+    m_OverrideState: 1
+    m_Value: 0
+  maskEdgeFineTuning:
+    m_OverrideState: 1
+    m_Value: 0.15
+  GlobalPostProcessingSettings:
+    m_OverrideState: 1
+    m_Value: 0
+--- !u!114 &3001372350885850771
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe6a5f8367faa4cf0b002fa2c5d958b9, type: 3}
+  m_Name: LimitlessGlitch6
+  m_EditorClassIdentifier: 
+  active: 1
+  enable:
+    m_OverrideState: 1
+    m_Value: 0
+  amount:
+    m_OverrideState: 1
+    m_Value: 0
+  interval:
+    m_OverrideState: 1
+    m_Value: 0
+  minMax:
+    m_OverrideState: 1
+    m_Value: {x: 0.1, y: 2}
+  frequency:
+    m_OverrideState: 1
+    m_Value: 1
+  rate:
+    m_OverrideState: 1
+    m_Value: 1
+  speed:
+    m_OverrideState: 1
+    m_Value: 1
+  unscaledTime:
+    m_OverrideState: 1
+    m_Value: 0
+  mask:
+    m_OverrideState: 1
+    m_Value: {fileID: 0}
+    dimension: 1
+  maskChannel:
+    m_OverrideState: 1
+    m_Value: 0
+  maskEdgeFineTuning:
+    m_OverrideState: 1
+    m_Value: 0.15
+  GlobalPostProcessingSettings:
+    m_OverrideState: 1
+    m_Value: 0
 --- !u!114 &3460444317416099510
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -649,6 +1580,144 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 1
   intensity:
+    m_OverrideState: 1
+    m_Value: 0
+--- !u!114 &3749673954275435878
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f23c77cfdf01814c87237b898e7e135, type: 3}
+  m_Name: Distortion_6
+  m_EditorClassIdentifier: 
+  active: 1
+  enable:
+    m_OverrideState: 1
+    m_Value: 0
+  fade:
+    m_OverrideState: 1
+    m_Value: 0
+  images:
+    m_OverrideState: 1
+    m_Value: 5
+  scale:
+    m_OverrideState: 1
+    m_Value: 1
+  rotation:
+    m_OverrideState: 1
+    m_Value: 45
+  offset:
+    m_OverrideState: 1
+    m_Value: 1
+  strength:
+    m_OverrideState: 1
+    m_Value: 0.5
+  black:
+    m_OverrideState: 1
+    m_Value: 0
+  speed:
+    m_OverrideState: 1
+    m_Value: 0.5
+  mask:
+    m_OverrideState: 1
+    m_Value: {fileID: 0}
+    dimension: 1
+  maskChannel:
+    m_OverrideState: 1
+    m_Value: 0
+  maskEdgeFineTuning:
+    m_OverrideState: 1
+    m_Value: 0.15
+  GlobalPostProcessingSettings:
+    m_OverrideState: 1
+    m_Value: 0
+--- !u!114 &4792598760953689535
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: baefd3c1c47f54fe19f095166c0dd36f, type: 3}
+  m_Name: Limitless_Glitch3
+  m_EditorClassIdentifier: 
+  active: 1
+  enable:
+    m_OverrideState: 1
+    m_Value: 0
+  speed:
+    m_OverrideState: 1
+    m_Value: 1
+  blockSize:
+    m_OverrideState: 1
+    m_Value: 0
+  maxOffsetX:
+    m_OverrideState: 1
+    m_Value: 0
+  maxOffsetY:
+    m_OverrideState: 1
+    m_Value: 0
+  mask:
+    m_OverrideState: 1
+    m_Value: {fileID: 0}
+    dimension: 1
+  maskChannel:
+    m_OverrideState: 1
+    m_Value: 0
+  maskEdgeFineTuning:
+    m_OverrideState: 1
+    m_Value: 0.15
+  GlobalPostProcessingSettings:
+    m_OverrideState: 1
+    m_Value: 0
+--- !u!114 &4988134765697539497
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69ff7d8e84451b8489404f58e9b80d3c, type: 3}
+  m_Name: LimitlessGlitch18
+  m_EditorClassIdentifier: 
+  active: 1
+  enable:
+    m_OverrideState: 1
+    m_Value: 0
+  fade:
+    m_OverrideState: 1
+    m_Value: 0
+  stop:
+    m_OverrideState: 1
+    m_Value: 0
+  offset:
+    m_OverrideState: 1
+    m_Value: 1
+  speed:
+    m_OverrideState: 1
+    m_Value: 48
+  randomActivateAmount:
+    m_OverrideState: 1
+    m_Value: 0.7
+  mask:
+    m_OverrideState: 1
+    m_Value: {fileID: 0}
+    dimension: 1
+  maskChannel:
+    m_OverrideState: 1
+    m_Value: 0
+  maskEdgeFineTuning:
+    m_OverrideState: 1
+    m_Value: 0.15
+  GlobalPostProcessingSettings:
     m_OverrideState: 1
     m_Value: 0
 --- !u!114 &5762530381802164056
@@ -718,6 +1787,226 @@ MonoBehaviour:
   chromaticAbberationIntensity:
     m_OverrideState: 1
     m_Value: 0.5
+--- !u!114 &6180575009138572700
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7eabfb6eb605ee4a9e293e0dcfb32cf, type: 3}
+  m_Name: Distortion_8
+  m_EditorClassIdentifier: 
+  active: 1
+  enable:
+    m_OverrideState: 1
+    m_Value: 0
+  amount:
+    m_OverrideState: 1
+    m_Value: 0
+  center:
+    m_OverrideState: 1
+    m_Value: {x: 0, y: 0}
+  mask:
+    m_OverrideState: 1
+    m_Value: {fileID: 0}
+    dimension: 1
+  maskChannel:
+    m_OverrideState: 1
+    m_Value: 0
+  maskEdgeFineTuning:
+    m_OverrideState: 1
+    m_Value: 0.15
+  GlobalPostProcessingSettings:
+    m_OverrideState: 1
+    m_Value: 0
+--- !u!114 &6269565682212810243
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cd84c3f878364be3971400192cf0d1b, type: 3}
+  m_Name: LimitlessGlitch5
+  m_EditorClassIdentifier: 
+  active: 1
+  enable:
+    m_OverrideState: 1
+    m_Value: 0
+  amount:
+    m_OverrideState: 1
+    m_Value: 0
+  offsetAxis:
+    m_OverrideState: 1
+    m_Value: 0
+  shiftMode:
+    m_OverrideState: 1
+    m_Value: 0
+  stretchResolution:
+    m_OverrideState: 1
+    m_Value: 220
+  interval:
+    m_OverrideState: 1
+    m_Value: 0
+  minMax:
+    m_OverrideState: 1
+    m_Value: {x: 0.5, y: 2.4}
+  frequency:
+    m_OverrideState: 1
+    m_Value: 1
+  rate:
+    m_OverrideState: 1
+    m_Value: 1
+  speed:
+    m_OverrideState: 1
+    m_Value: 1
+  unscaledTime:
+    m_OverrideState: 1
+    m_Value: 0
+  mask:
+    m_OverrideState: 1
+    m_Value: {fileID: 0}
+    dimension: 1
+  maskChannel:
+    m_OverrideState: 1
+    m_Value: 0
+  maskEdgeFineTuning:
+    m_OverrideState: 1
+    m_Value: 0.15
+  GlobalPostProcessingSettings:
+    m_OverrideState: 1
+    m_Value: 0
+--- !u!114 &6466966701952769785
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b973f681804446538903cfc706fff30, type: 3}
+  m_Name: Limitless_Glitch1
+  m_EditorClassIdentifier: 
+  active: 1
+  enable:
+    m_OverrideState: 1
+    m_Value: 0
+  x:
+    m_OverrideState: 1
+    m_Value: 127.1
+  y:
+    m_OverrideState: 1
+    m_Value: 43758.547
+  z:
+    m_OverrideState: 1
+    m_Value: 311.7
+  fade:
+    m_OverrideState: 1
+    m_Value: 0
+  amount:
+    m_OverrideState: 1
+    m_Value: 0
+  stretch:
+    m_OverrideState: 1
+    m_Value: 0
+  speed:
+    m_OverrideState: 1
+    m_Value: 0.5
+  rMultiplier:
+    m_OverrideState: 1
+    m_Value: 1
+  gMultiplier:
+    m_OverrideState: 1
+    m_Value: 1
+  bMultiplier:
+    m_OverrideState: 1
+    m_Value: 0
+  mask:
+    m_OverrideState: 1
+    m_Value: {fileID: 0}
+    dimension: 1
+  maskChannel:
+    m_OverrideState: 1
+    m_Value: 0
+  maskEdgeFineTuning:
+    m_OverrideState: 1
+    m_Value: 0.15
+  GlobalPostProcessingSettings:
+    m_OverrideState: 1
+    m_Value: 0
+--- !u!114 &7014129074209260988
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99dd963ec21614789b8ed8440a428102, type: 3}
+  m_Name: Limitless_Glitch2
+  m_EditorClassIdentifier: 
+  active: 1
+  enable:
+    m_OverrideState: 1
+    m_Value: 0
+  intensity:
+    m_OverrideState: 1
+    m_Value: 0
+  speed:
+    m_OverrideState: 1
+    m_Value: 1
+  resolutionMultiplier:
+    m_OverrideState: 1
+    m_Value: 1
+  stretchMultiplier:
+    m_OverrideState: 1
+    m_Value: 0.88
+  mask:
+    m_OverrideState: 1
+    m_Value: {fileID: 0}
+    dimension: 1
+  maskChannel:
+    m_OverrideState: 1
+    m_Value: 0
+  maskEdgeFineTuning:
+    m_OverrideState: 1
+    m_Value: 0.15
+  GlobalPostProcessingSettings:
+    m_OverrideState: 1
+    m_Value: 0
+--- !u!114 &7847247344851824293
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4624be8b062f7d41ac50b4fe7d2e678, type: 3}
+  m_Name: CustomTextureD
+  m_EditorClassIdentifier: 
+  active: 1
+  enable:
+    m_OverrideState: 1
+    m_Value: 1
+  texture:
+    m_OverrideState: 1
+    m_Value: {fileID: 8400000, guid: 68061e61f860147a4aee0b96bc0833b4, type: 2}
+    dimension: 1
+  fade:
+    m_OverrideState: 1
+    m_Value: 1
+  GlobalPostProcessingSettings:
+    m_OverrideState: 1
+    m_Value: 0
 --- !u!114 &7933203426823181213
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -746,6 +2035,97 @@ MonoBehaviour:
   saturation:
     m_OverrideState: 1
     m_Value: 0
+--- !u!114 &7974103344028936037
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82cdc565e0b56f440be3e6c23aabc651, type: 3}
+  m_Name: Distortion_3
+  m_EditorClassIdentifier: 
+  active: 1
+  enable:
+    m_OverrideState: 1
+    m_Value: 0
+  fade:
+    m_OverrideState: 1
+    m_Value: 0
+  ringsCount:
+    m_OverrideState: 1
+    m_Value: 5
+  zoom:
+    m_OverrideState: 1
+    m_Value: 0.5
+  speed:
+    m_OverrideState: 1
+    m_Value: 1
+  mask:
+    m_OverrideState: 1
+    m_Value: {fileID: 0}
+    dimension: 1
+  maskChannel:
+    m_OverrideState: 1
+    m_Value: 0
+  maskEdgeFineTuning:
+    m_OverrideState: 1
+    m_Value: 0.15
+  GlobalPostProcessingSettings:
+    m_OverrideState: 1
+    m_Value: 0
+--- !u!114 &7994143669609232482
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b63eddb8b2bf98b4598a476547a73462, type: 3}
+  m_Name: LimitlessGlitch17
+  m_EditorClassIdentifier: 
+  active: 1
+  enable:
+    m_OverrideState: 1
+    m_Value: 0
+  fade:
+    m_OverrideState: 1
+    m_Value: 0
+  stop:
+    m_OverrideState: 1
+    m_Value: 0
+  strength:
+    m_OverrideState: 1
+    m_Value: 0.03
+  speed:
+    m_OverrideState: 1
+    m_Value: 16
+  size:
+    m_OverrideState: 1
+    m_Value: 1
+  RGBSplit:
+    m_OverrideState: 1
+    m_Value: 1
+  randomActivateAmount:
+    m_OverrideState: 1
+    m_Value: 1
+  mask:
+    m_OverrideState: 1
+    m_Value: {fileID: 0}
+    dimension: 1
+  maskChannel:
+    m_OverrideState: 1
+    m_Value: 0
+  maskEdgeFineTuning:
+    m_OverrideState: 1
+    m_Value: 0.15
+  GlobalPostProcessingSettings:
+    m_OverrideState: 1
+    m_Value: 0
 --- !u!114 &8549655192814258499
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -772,6 +2152,94 @@ MonoBehaviour:
     m_OverrideState: 1
     m_Value: 0.2
   rounded:
+    m_OverrideState: 1
+    m_Value: 0
+--- !u!114 &8966621191604839680
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19f129d0a973cb745ad81d244a2dc3dd, type: 3}
+  m_Name: Distortion_4
+  m_EditorClassIdentifier: 
+  active: 1
+  enable:
+    m_OverrideState: 1
+    m_Value: 0
+  fade:
+    m_OverrideState: 1
+    m_Value: 0
+  intensity:
+    m_OverrideState: 1
+    m_Value: 1
+  innerRadius:
+    m_OverrideState: 1
+    m_Value: 0.1
+  outerRadius:
+    m_OverrideState: 1
+    m_Value: 0.49
+  fill:
+    m_OverrideState: 1
+    m_Value: 0.9
+  black:
+    m_OverrideState: 1
+    m_Value: 1
+  mask:
+    m_OverrideState: 1
+    m_Value: {fileID: 0}
+    dimension: 1
+  maskChannel:
+    m_OverrideState: 1
+    m_Value: 0
+  maskEdgeFineTuning:
+    m_OverrideState: 1
+    m_Value: 0.15
+  GlobalPostProcessingSettings:
+    m_OverrideState: 1
+    m_Value: 0
+--- !u!114 &9082991650364262261
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bae5ef5e700a4208be7236164f4ff60, type: 3}
+  m_Name: LimitlessGlitch7
+  m_EditorClassIdentifier: 
+  active: 1
+  enable:
+    m_OverrideState: 1
+    m_Value: 0
+  Fade:
+    m_OverrideState: 1
+    m_Value: 0
+  Amount:
+    m_OverrideState: 1
+    m_Value: 1
+  Speed:
+    m_OverrideState: 1
+    m_Value: 1
+  unscaledTime:
+    m_OverrideState: 1
+    m_Value: 0
+  mask:
+    m_OverrideState: 1
+    m_Value: {fileID: 0}
+    dimension: 1
+  maskChannel:
+    m_OverrideState: 1
+    m_Value: 0
+  maskEdgeFineTuning:
+    m_OverrideState: 1
+    m_Value: 0.15
+  GlobalPostProcessingSettings:
     m_OverrideState: 1
     m_Value: 0
 --- !u!114 &9099548931283147545

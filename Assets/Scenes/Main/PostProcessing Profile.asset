@@ -1,0 +1,278 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-6146209697629266120
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19f129d0a973cb745ad81d244a2dc3dd, type: 3}
+  m_Name: Distortion_4
+  m_EditorClassIdentifier: 
+  active: 0
+  enable:
+    m_OverrideState: 1
+    m_Value: 1
+  fade:
+    m_OverrideState: 1
+    m_Value: 0
+  intensity:
+    m_OverrideState: 0
+    m_Value: 1
+  innerRadius:
+    m_OverrideState: 0
+    m_Value: 0.1
+  outerRadius:
+    m_OverrideState: 0
+    m_Value: 0.49
+  fill:
+    m_OverrideState: 0
+    m_Value: 0.9
+  black:
+    m_OverrideState: 0
+    m_Value: 1
+  mask:
+    m_OverrideState: 0
+    m_Value: {fileID: 0}
+    dimension: 1
+  maskChannel:
+    m_OverrideState: 0
+    m_Value: 0
+  maskEdgeFineTuning:
+    m_OverrideState: 0
+    m_Value: 0.15
+  GlobalPostProcessingSettings:
+    m_OverrideState: 0
+    m_Value: 0
+--- !u!114 &-5229515650263818848
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66f335fb1ffd8684294ad653bf1c7564, type: 3}
+  m_Name: ColorAdjustments
+  m_EditorClassIdentifier: 
+  active: 1
+  postExposure:
+    m_OverrideState: 0
+    m_Value: 0
+  contrast:
+    m_OverrideState: 1
+    m_Value: 89
+  colorFilter:
+    m_OverrideState: 1
+    m_Value: {r: 1, g: 1, b: 1, a: 1}
+  hueShift:
+    m_OverrideState: 0
+    m_Value: 0
+  saturation:
+    m_OverrideState: 0
+    m_Value: 0
+--- !u!114 &-17948850271617951
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8682c764501662d4989b773894168582, type: 3}
+  m_Name: Distortion_10
+  m_EditorClassIdentifier: 
+  active: 1
+  enable:
+    m_OverrideState: 1
+    m_Value: 1
+  Intensity:
+    m_OverrideState: 1
+    m_Value: 0.64
+  Frequency:
+    m_OverrideState: 1
+    m_Value: 15
+  Speed:
+    m_OverrideState: 1
+    m_Value: 0.015
+  center:
+    m_OverrideState: 0
+    m_Value: {x: 0, y: 0}
+  mask:
+    m_OverrideState: 0
+    m_Value: {fileID: 0}
+    dimension: 1
+  maskChannel:
+    m_OverrideState: 0
+    m_Value: 0
+  maskEdgeFineTuning:
+    m_OverrideState: 0
+    m_Value: 0.15
+  GlobalPostProcessingSettings:
+    m_OverrideState: 0
+    m_Value: 0
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7fd9488000d3734a9e00ee676215985, type: 3}
+  m_Name: PostProcessing Profile
+  m_EditorClassIdentifier: 
+  components:
+  - {fileID: -17948850271617951}
+  - {fileID: 1598811522128162095}
+  - {fileID: 7159013346058618629}
+  - {fileID: -6146209697629266120}
+  - {fileID: 4639677413000845844}
+  - {fileID: -5229515650263818848}
+--- !u!114 &1598811522128162095
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acf651632ce59b84885e79d1736581be, type: 3}
+  m_Name: Distortion_9
+  m_EditorClassIdentifier: 
+  active: 1
+  enable:
+    m_OverrideState: 0
+    m_Value: 1
+  fade:
+    m_OverrideState: 1
+    m_Value: 0.344
+  maximumImages:
+    m_OverrideState: 0
+    m_Value: 1
+  speed:
+    m_OverrideState: 0
+    m_Value: 0.5
+  mask:
+    m_OverrideState: 0
+    m_Value: {fileID: 0}
+    dimension: 1
+  maskChannel:
+    m_OverrideState: 0
+    m_Value: 0
+  maskEdgeFineTuning:
+    m_OverrideState: 0
+    m_Value: 0.15
+  GlobalPostProcessingSettings:
+    m_OverrideState: 0
+    m_Value: 0
+--- !u!114 &4639677413000845844
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe6a5f8367faa4cf0b002fa2c5d958b9, type: 3}
+  m_Name: LimitlessGlitch6
+  m_EditorClassIdentifier: 
+  active: 0
+  enable:
+    m_OverrideState: 1
+    m_Value: 1
+  amount:
+    m_OverrideState: 1
+    m_Value: 14
+  interval:
+    m_OverrideState: 0
+    m_Value: 0
+  minMax:
+    m_OverrideState: 0
+    m_Value: {x: 0.1, y: 2}
+  frequency:
+    m_OverrideState: 0
+    m_Value: 1
+  rate:
+    m_OverrideState: 0
+    m_Value: 1
+  speed:
+    m_OverrideState: 0
+    m_Value: 1
+  unscaledTime:
+    m_OverrideState: 0
+    m_Value: 0
+  mask:
+    m_OverrideState: 0
+    m_Value: {fileID: 0}
+    dimension: 1
+  maskChannel:
+    m_OverrideState: 0
+    m_Value: 0
+  maskEdgeFineTuning:
+    m_OverrideState: 0
+    m_Value: 0.15
+  GlobalPostProcessingSettings:
+    m_OverrideState: 0
+    m_Value: 0
+--- !u!114 &7159013346058618629
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f23c77cfdf01814c87237b898e7e135, type: 3}
+  m_Name: Distortion_6
+  m_EditorClassIdentifier: 
+  active: 1
+  enable:
+    m_OverrideState: 1
+    m_Value: 1
+  fade:
+    m_OverrideState: 1
+    m_Value: 0.813
+  images:
+    m_OverrideState: 0
+    m_Value: 5
+  scale:
+    m_OverrideState: 0
+    m_Value: 1
+  rotation:
+    m_OverrideState: 0
+    m_Value: 45
+  offset:
+    m_OverrideState: 0
+    m_Value: 1
+  strength:
+    m_OverrideState: 0
+    m_Value: 0.5
+  black:
+    m_OverrideState: 0
+    m_Value: 0
+  speed:
+    m_OverrideState: 0
+    m_Value: 0.5
+  mask:
+    m_OverrideState: 0
+    m_Value: {fileID: 0}
+    dimension: 1
+  maskChannel:
+    m_OverrideState: 0
+    m_Value: 0
+  maskEdgeFineTuning:
+    m_OverrideState: 0
+    m_Value: 0.15
+  GlobalPostProcessingSettings:
+    m_OverrideState: 0
+    m_Value: 0

@@ -8,6 +8,9 @@ Hidden/
 .env
 .obsidian/plugins/
 
+# Project-specfic files
+LimitlessUnityDevelopment/
+
 # gitignore file from NYU Game Center
 
 # ignore git config as it will be differ across clients
