@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "Process/Journal.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "Journal"
             }
           }
         ]
@@ -171,17 +171,29 @@
   },
   "active": "f45619208928840c",
   "lastOpenFiles": [
-    "Process/Journal.md",
-    "Temp/ADB-Refreshe7c49922ea07a41a69c35f22901331b3",
-    "Temp/ADB-Refresh05fb2dcd6300447da8204d9720da79b7",
-    "Temp/ADB-Refresh08877511c83614c03b5402c28fa680f5",
-    "Temp/Burst/burst-aoto1m0ub54.2xu",
-    "Temp/Burst/burst-aotp9nc6m74.l96",
-    "Temp/Burst/burst-aota86m5dph.2hi",
-    "Temp/Burst/burst-aot64zxraul.dii",
-    "Temp/Burst/burst-aotqm78xkx7.2zs",
-    "Temp/Burst/burst-aot01tin7g7.w70",
-    "Temp/Burst/burst-aotxgwv39j9.4ve",
-    "README.md"
+    "Process/Media/layerSplit.gif",
+    "Process/Media/ezgif.com-video-to-gif-converter.gif",
+    "UserSettings/Layouts/CurrentMaximizeLayout.dwlt",
+    "Temp/ADB-Refresh533e8f417976646f19de2b3cafab4301",
+    "Temp/ADB-Refresh4578277dd60384a8cb6f7a7a62a55432",
+    "Temp/ADB-Refresh78e416a17b55a4cc5ba84393b29388a1",
+    "Temp/Burst/burst-aottsswltff.nk6",
+    "Temp/Burst/burst-aotgct2dfnl.m7t",
+    "Temp/Burst/burst-aotxj28hgdx.co4",
+    "Temp/Burst/burst-aot3gl4ozf4.1o7",
+    "Temp/Burst/burst-aotos5hl5x7.a9v",
+    "Temp/Burst/burst-aothplaf7ih.pl6",
+    "Assets/Resources/wickSprites/layer_5/33.png",
+    "Assets/Resources/wickSprites/layer_5/36.png",
+    "Assets/Resources/wickSprites/layer_5/35.png",
+    "Assets/Resources/wickSprites/layer_5/34.png",
+    "Assets/Resources/wickSprites/layer_5/29.png",
+    "Assets/Resources/wickSprites/layer_5/32.png",
+    "Assets/Resources/wickSprites/layer_5/31.png",
+    "Assets/Resources/wickSprites/layer_5/30.png",
+    "Assets/Resources/wickSprites/layer_5/28.png",
+    "README_frame_extractor.md",
+    "README.md",
+    "Process/Journal.md"
   ]
 }
