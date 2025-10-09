@@ -6,7 +6,7 @@ public class FSR : MonoBehaviour
     [Header("Sensor Configuration")]
     [SerializeField] private int sensorId = 0;
     [Range(0f, 1f)]
-    [SerializeField] public float force = 0f;
+    [SerializeField] public float force = 0.1f;
     [SerializeField] public float timeHeld = 0f;
     
     [Header("Animation")]
