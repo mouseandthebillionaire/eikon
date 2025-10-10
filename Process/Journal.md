@@ -36,6 +36,13 @@ I tried getting Claude to quickly spin up a version of [this](https://github.com
 
 There's an immediate worry that the visuals may be a bit _too_ subtle, but I'll start playing with it and maybe do some treatment to the sprites if I need. It also points towards the question of whether or not the _whole thing_ might be too subtle, but it's a delicate balance when you're not trying to hit people over the head with a thing. The textual elements worked really well with IE, so I might go back to that just to have _something_ for people to be pointed to. We'll see.
 
+## 10.09.25 | Interaction Iteration 1
+
+![Sphere Interaction](Media/sphereInteraction.gif)
+
+These circles were initially just part of the FSR test setup, but they add some visual interest to the whole thing, so I left them in. I can see a version of this that is using more ambiguous shapes/interactions, but this feels good for now. I think partly I'm working from an understanding the the Whaaat!? Festival audience (and venue?) may not be the idea place for something 'challenging.' Look at this gif, though, I am struck by the cyclical nature of the circles, which seems kind of nice. Perhaps there is a version where a constant press cycles through this breathe-in-breathe-out looking thing (which is what L suggested last night after seeing it).
+
+Overall, I like it. It's nice to have the thing mostly built so that I can sit with it for a bit and make these iterative changes.
 
 ---
 ## Notes
