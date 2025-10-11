@@ -9,11 +9,6 @@ public class FSR : MonoBehaviour
     [SerializeField] public float force = 0.1f;
     [SerializeField] public float timeHeld = 0f;
     
-    [Header("Animation")]
-    [SerializeField] private bool enableScaleAnimation = true;
-    [SerializeField] private Vector3 baseScale = Vector3.one;
-    [SerializeField] private Vector3 maxScale = Vector3.one * 1.2f;
-    [SerializeField] private float animationSpeed = 5f;
     
     [Header("Keyboard Testing")]
     [SerializeField] private KeyCode testKey = KeyCode.Space;
@@ -29,7 +24,6 @@ public class FSR : MonoBehaviour
     private bool wasActive = false;
     private float lastValue = 0f;
 
-    private Vector3 targetScale;
     
     // Events
     public static event Action<FSR, ForceSensorData> OnFSRValueChanged;
@@ -53,17 +47,14 @@ public class FSR : MonoBehaviour
             HandleKeyboardInput();
         }
         
-        UpdateScaleAnimation();
+        UpdateShapeAnimation();
         UpdateTimeHeld();
     }
     
     private void InitializeFSR()
     {
-        
-        // Initialize scale
-        targetScale = baseScale;
-        transform.localScale = baseScale;
-    
+        // FSR initialization - no longer needs to find ShapeScript
+        // Shapes will now subscribe to FSR events directly
     }
     
     private void SubscribeToEvents()
@@ -116,21 +107,10 @@ public class FSR : MonoBehaviour
         }
     }
     
-    private void UpdateScaleAnimation()
+    private void UpdateShapeAnimation()
     {
-        if (!enableScaleAnimation) return;
-        
-        if (isActive)
-        {
-            float intensity = currentData.normalizedValue;
-            targetScale = Vector3.Lerp(baseScale, maxScale, intensity);
-        }
-        else
-        {
-            targetScale = baseScale;
-        }
-        
-        transform.localScale = Vector3.Lerp(transform.localScale, targetScale, Time.deltaTime * animationSpeed);
+        // Animation is now handled by shapes listening to FSR events
+        // This method is kept for compatibility but does nothing
     }
 
     private void UpdateTimeHeld()
@@ -227,11 +207,16 @@ public class FSR : MonoBehaviour
     
     public void SetScaleAnimation(bool enabled)
     {
-        enableScaleAnimation = enabled;
-        if (!enabled)
-        {
-            transform.localScale = baseScale;
-        }
+        // This method is kept for compatibility but now does nothing
+        // Scale animation is controlled directly on ShapeScript components
+        Debug.LogWarning("SetScaleAnimation called on FSR. This should now be called directly on ShapeScript components.");
+    }
+    
+    public void SetRotationAnimation(bool enabled)
+    {
+        // This method is kept for compatibility but now does nothing
+        // Rotation animation is controlled directly on ShapeScript components
+        Debug.LogWarning("SetRotationAnimation called on FSR. This should now be called directly on ShapeScript components.");
     }
     
     public void SetKeyboardTesting(bool enabled)
@@ -292,32 +277,6 @@ public class FSR : MonoBehaviour
         else
         {
             Debug.LogWarning("Keyboard testing is disabled. Enable it first to simulate key release.");
-        }
-    }
-    
-    // Gizmos for editor visualization
-    void OnDrawGizmos()
-    {
-        if (showDebugInfo)
-        {
-            // Main sensor indicator
-            Gizmos.color = isActive ? Color.green : Color.red;
-            Gizmos.DrawWireSphere(transform.position, 0.5f);
-            
-            // Draw value as height
-            if (isActive)
-            {
-                Gizmos.color = Color.yellow;
-                Vector3 valueHeight = transform.position + Vector3.up * currentData.normalizedValue;
-                Gizmos.DrawLine(transform.position, valueHeight);
-            }
-            
-            // Keyboard testing indicator
-            if (Controller.S.enableKeyboardTesting)
-            {
-                Gizmos.color = isKeyboardPressed ? Color.cyan : Color.blue;
-                Gizmos.DrawWireCube(transform.position + Vector3.right * 1.5f, Vector3.one * 0.3f);
-            }
         }
     }
 }

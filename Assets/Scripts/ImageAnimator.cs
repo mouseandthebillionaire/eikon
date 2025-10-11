@@ -4,6 +4,7 @@ using System.Collections;
 public class ImageAnimator : MonoBehaviour
 {
     [Header("Animation Settings")]
+    public string spriteSheetFolder = "wickSprites";
     public string spriteSheetName = "layer_0";
     public float frameRate = 10f;
     public bool loop = true;
@@ -32,7 +33,7 @@ public class ImageAnimator : MonoBehaviour
         // Get miliseconds from Seconds
         returnToZeroTime = returnToZeroTime * 1000f;
         
-        frames = Resources.LoadAll<Sprite>("wickSprites/" + spriteSheetName);
+        frames = Resources.LoadAll<Sprite>(spriteSheetFolder + "/" + spriteSheetName);
         
         if (frames.Length == 0)
         {

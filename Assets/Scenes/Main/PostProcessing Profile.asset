@@ -61,20 +61,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 1
   postExposure:
-    m_OverrideState: 0
-    m_Value: 0
+    m_OverrideState: 1
+    m_Value: -0.29
   contrast:
     m_OverrideState: 1
-    m_Value: 89
+    m_Value: 99
   colorFilter:
     m_OverrideState: 1
-    m_Value: {r: 1, g: 1, b: 1, a: 1}
+    m_Value: {r: 1, g: 0.6179246, b: 0.6179246, a: 1}
   hueShift:
-    m_OverrideState: 0
-    m_Value: 0
+    m_OverrideState: 1
+    m_Value: -180
   saturation:
-    m_OverrideState: 0
-    m_Value: 0
+    m_OverrideState: 1
+    m_Value: 1
 --- !u!114 &-17948850271617951
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -87,7 +87,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8682c764501662d4989b773894168582, type: 3}
   m_Name: Distortion_10
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   enable:
     m_OverrideState: 1
     m_Value: 1
@@ -149,17 +149,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 0
   enable:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 1
   fade:
     m_OverrideState: 1
-    m_Value: 0.344
-  maximumImages:
-    m_OverrideState: 0
     m_Value: 1
+  maximumImages:
+    m_OverrideState: 1
+    m_Value: 0.55
   speed:
-    m_OverrideState: 0
-    m_Value: 0.5
+    m_OverrideState: 1
+    m_Value: 0.04
   mask:
     m_OverrideState: 0
     m_Value: {fileID: 0}
