@@ -40,9 +40,19 @@ There's an immediate worry that the visuals may be a bit _too_ subtle, but I'll 
 
 ![Sphere Interaction](Media/sphereInteraction.gif)
 
-These circles were initially just part of the FSR test setup, but they add some visual interest to the whole thing, so I left them in. I can see a version of this that is using more ambiguous shapes/interactions, but this feels good for now. I think partly I'm working from an understanding the the Whaaat!? Festival audience (and venue?) may not be the idea place for something 'challenging.' Look at this gif, though, I am struck by the cyclical nature of the circles, which seems kind of nice. Perhaps there is a version where a constant press cycles through this breathe-in-breathe-out looking thing (which is what L suggested last night after seeing it).
+These circles were initially just part of the FSR test setup, but they add some visual interest to the whole thing, so I left them in[^4]. I can see a version of this that is using more ambiguous shapes/interactions, but this feels good for now. I think partly I'm working from an understanding the the Whaaat!? Festival audience (and venue?) may not be the idea place for something 'challenging.' Look at this gif, though, I am struck by the cyclical nature of the circles, which seems kind of nice. Perhaps there is a version where a constant press cycles through this breathe-in-breathe-out looking thing (which is what L suggested last night after seeing it).
 
 Overall, I like it. It's nice to have the thing mostly built so that I can sit with it for a bit and make these iterative changes.
+
+## 10.11.25 | Iteration 2: Pink Triangles
+
+![Pink Triangles](Media/pinkTriangles.png)
+
+I wanted to test out a different shape and went with these [pink triangles](https://www.youtube.com/watch?v=v2vWDWxYJBc&list=RDv2vWDWxYJBc&start_radio=1). Seeing them in the space then gave me the idea to also have them rotate as they increases in size. I'm also experimenting here with random assigning the FSRs to shapes instead of the ones that make the most sense spatially (upper left to upper left, etc). To help take care of all of this, I created a shapeManager that creates the shapes, lays them out, and assigns the FSRs (rather than the shapes doing so themselves, which is what was happening earlier)
+
+This makes me think that a larger grid of triangles with randomly assigned FSRs could be an interesting interaction. The user places their hands on the board, presses, and then a random assortment of triangles are affected. This would make the whole interaction much more exploratory. You would have to figure out what combination effects the visuals (and sounds) in the way that is most pleasing to you. This assignment could also be done randomly every so often (or after accomplishing some task - say interacting with the system for a certain length of time) Good areas to move forward with, I think. Next!
+
+![Pink Triangles in Action!](Media/pinkTriangles.gif)
 
 ---
 ## Notes
@@ -50,3 +60,4 @@ Overall, I like it. It's nice to have the thing mostly built so that I can sit w
 [^1]: Hence the repo name...
 [^2]: Which, not gonna lie, not a terrible idea, Haha
 [^3]: If I've learned one thing from teaching, it's don't count on things to work out down the road...
+[^4]: The whole thing also feels very [Digital Yoga](https://github.com/mouseandthebillionaire/digitalYoga) which is a fun throwback - if only just for me
