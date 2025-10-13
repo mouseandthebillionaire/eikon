@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class ShapeScript : MonoBehaviour
 {
@@ -16,7 +17,12 @@ public class ShapeScript : MonoBehaviour
     [SerializeField] private bool enableRotationAnimation = true;
     [SerializeField] private Vector3 baseRotation;
     [SerializeField] private float rotationRate = 90f; // degrees per second
-    
+
+    // Shape Animation
+    private SpriteRenderer sr;
+    private Sprite[] frames;
+    public float frameRate = 10f;
+
     // Runtime animation data
     private Vector3 targetScale;
     private Vector3 targetRotation;
@@ -60,6 +66,13 @@ public class ShapeScript : MonoBehaviour
         // Initialize rotation - capture current transform rotation as base
         baseRotation = transform.localEulerAngles;
         targetRotation = baseRotation;
+
+        // Get Sprite Renderer
+        sr = GetComponent<SpriteRenderer>();
+        // Get Frames
+        frames = Resources.LoadAll<Sprite>("Circles");
+        // Start the Animation
+        StartCoroutine(ShapeAnimation());
     }
     
     private void AssignFSR()
@@ -142,6 +155,13 @@ public class ShapeScript : MonoBehaviour
             int randomIndex = Random.Range(0, fsrs.Length);
             AssignFSR(fsrs[randomIndex]);
         }
+    }
+
+    private IEnumerator ShapeAnimation(){
+        int currentFrame = Random.Range(0, frames.Length);
+        sr.sprite = frames[currentFrame];
+        yield return new WaitForSeconds(1f / frameRate);
+        StartCoroutine(ShapeAnimation());
     }
     
     private void UpdateScaleAnimation()

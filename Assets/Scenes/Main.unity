@@ -580,9 +580,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shapePrefab: {fileID: 5264012225040235308, guid: c60f97321445f41c5bea88b7d345a4f3, type: 3}
-  shapeCount: 6
-  columns: 3
-  spacing: 1
+  rows: 7
+  columns: 12
+  spacing: 1.5
+  verticalSpacing: 1.5
+  baseScale: {x: 1, y: 1, z: 0}
+  maxScale: {x: 10, y: 10, z: 0}
+  enableRandomOffset: 1
+  minOffset: 0.1
+  maxOffset: 0.5
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0

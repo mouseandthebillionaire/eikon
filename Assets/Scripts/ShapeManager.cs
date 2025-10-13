@@ -12,6 +12,11 @@ public class ShapeManager : MonoBehaviour
     [Header("Shape Scaling")]
     public Vector3 baseScale = Vector3.one; // Starting size of shapes
     public Vector3 maxScale = Vector3.one * 1.2f; // Maximum size when fully activated
+    
+    [Header("Random Positioning")]
+    public bool enableRandomOffset = true; // Enable random position offsets
+    public float minOffset = 0.1f; // Minimum random offset
+    public float maxOffset = 0.5f; // Maximum random offset
 
     private static ShapeManager S;
     
@@ -47,12 +52,32 @@ public class ShapeManager : MonoBehaviour
             {
                 GameObject shape = Instantiate(shapePrefab, transform);
                 
-                // Set centered position
-                shape.transform.position = new Vector3(
-                    col * spacing + offsetX, 
-                    row * verticalSpacing + offsetY, 
-                    0
-                );
+                // Calculate base centered position
+                float baseX = col * spacing + offsetX;
+                float baseY = row * verticalSpacing + offsetY;
+                
+                // Add random offset if enabled
+                if (enableRandomOffset)
+                {
+                    float randomOffsetX = Random.Range(-maxOffset, maxOffset);
+                    float randomOffsetY = Random.Range(-maxOffset, maxOffset);
+                    
+                    // Ensure offset is at least minOffset in magnitude
+                    if (Mathf.Abs(randomOffsetX) < minOffset)
+                    {
+                        randomOffsetX = randomOffsetX >= 0 ? minOffset : -minOffset;
+                    }
+                    if (Mathf.Abs(randomOffsetY) < minOffset)
+                    {
+                        randomOffsetY = randomOffsetY >= 0 ? minOffset : -minOffset;
+                    }
+                    
+                    baseX += randomOffsetX;
+                    baseY += randomOffsetY;
+                }
+                
+                // Set final position
+                shape.transform.position = new Vector3(baseX, baseY, 0);
                 
                 // Rotate every other shape 180 degrees
                 if (shapeIndex % 2 == 0) // Every even-indexed shape (0, 2, 4, ...)
@@ -94,31 +119,38 @@ public class ShapeManager : MonoBehaviour
     private List<int> CreateFSRAssignmentList(int fsrCount)
     {
         List<int> fsrIndices = new List<int>();
+        int totalShapes = rows * columns;
         
-            // Create a list that uses all FSRs
-            for (int i = 0; i < fsrCount; i++)
+        // Calculate how many shapes each FSR should control
+        int shapesPerFSR = totalShapes / fsrCount;
+        int extraShapes = totalShapes % fsrCount;
+        
+        // Create a list where each FSR appears the appropriate number of times
+        for (int fsrIndex = 0; fsrIndex < fsrCount; fsrIndex++)
+        {
+            int timesToAdd = shapesPerFSR;
+            
+            // Give extra shapes to the first few FSRs
+            if (fsrIndex < extraShapes)
             {
-                fsrIndices.Add(i);
+                timesToAdd++;
             }
             
-            // Shuffle the list if requested
-            
+            // Add this FSR the calculated number of times
+            for (int i = 0; i < timesToAdd; i++)
             {
-                for (int i = 0; i < fsrIndices.Count; i++)
-                {
-                    int temp = fsrIndices[i];
-                    int randomIndex = Random.Range(i, fsrIndices.Count);
-                    fsrIndices[i] = fsrIndices[randomIndex];
-                    fsrIndices[randomIndex] = temp;
-                }
+                fsrIndices.Add(fsrIndex);
             }
+        }
         
-            // Just use FSRs in order
-            for (int i = 0; i < fsrCount; i++)
-            {
-                fsrIndices.Add(i);
-            }
-        
+        // Shuffle the list to randomize the assignment order
+        for (int i = 0; i < fsrIndices.Count; i++)
+        {
+            int temp = fsrIndices[i];
+            int randomIndex = Random.Range(i, fsrIndices.Count);
+            fsrIndices[i] = fsrIndices[randomIndex];
+            fsrIndices[randomIndex] = temp;
+        }
         
         return fsrIndices;
     }
@@ -185,6 +217,61 @@ public class ShapeManager : MonoBehaviour
             shape.SetMaxScale(maxScale);
         }
         Debug.Log($"Updated scale values for {shapes.Length} shapes. Base: {baseScale}, Max: {maxScale}");
+    }
+    
+    [ContextMenu("Randomize All Shape Positions")]
+    public void RandomizeAllShapePositions()
+    {
+        ShapeScript[] shapes = GetComponentsInChildren<ShapeScript>();
+        int shapeIndex = 0;
+        
+        // Calculate center offset (same as in CreateShapes)
+        float totalWidth = (columns - 1) * spacing;
+        float totalHeight = (rows - 1) * verticalSpacing;
+        float offsetX = -totalWidth / 2f;
+        float offsetY = -totalHeight / 2f;
+        
+        for (int row = 0; row < rows; row++)
+        {
+            for (int col = 0; col < columns; col++)
+            {
+                if (shapeIndex < shapes.Length)
+                {
+                    GameObject shape = shapes[shapeIndex].gameObject;
+                    
+                    // Calculate base centered position
+                    float baseX = col * spacing + offsetX;
+                    float baseY = row * verticalSpacing + offsetY;
+                    
+                    // Add random offset if enabled
+                    if (enableRandomOffset)
+                    {
+                        float randomOffsetX = Random.Range(-maxOffset, maxOffset);
+                        float randomOffsetY = Random.Range(-maxOffset, maxOffset);
+                        
+                        // Ensure offset is at least minOffset in magnitude
+                        if (Mathf.Abs(randomOffsetX) < minOffset)
+                        {
+                            randomOffsetX = randomOffsetX >= 0 ? minOffset : -minOffset;
+                        }
+                        if (Mathf.Abs(randomOffsetY) < minOffset)
+                        {
+                            randomOffsetY = randomOffsetY >= 0 ? minOffset : -minOffset;
+                        }
+                        
+                        baseX += randomOffsetX;
+                        baseY += randomOffsetY;
+                    }
+                    
+                    // Set final position
+                    shape.transform.position = new Vector3(baseX, baseY, 0);
+                    
+                    shapeIndex++;
+                }
+            }
+        }
+        
+        Debug.Log($"Randomized positions for {shapes.Length} shapes");
     }
     
     // Public API for runtime scale changes
