@@ -54,6 +54,23 @@ This makes me think that a larger grid of triangles with randomly assigned FSRs 
 
 ![Pink Triangles in Action!](Media/pinkTriangles.gif)
 
+## 10.13.25
+
+![Circle Grid](Media/circleGrid.png)
+
+L suggested that the circles are more organic, so even though I'm throwing this one in a grid, by adding in a little bit of offsets in their placement, I think we've got a nice little organic vibe here. Looking at the above image makes me think that I could also slightly modify their base size and colors as well, to give more non-uniformity.
+
+![Circle Grid gif](Media/circleGrid.gif)
+
+I also wanted the circles to be more organic, so I drew [twenty circles](../Assets/Resources/Circles) that the gameObject is randomly flipping between. A note: this process itself was highly contemplative! I imported a simple circle into procreate, and then drew each circle while exhaling exactly one breath length. Very nice.
+
+I like the way this is looking. It's hard to tell exactly what it's going to feel like without the FSRs, but I tried dragging my finger along the keys I've set to test, and there's a fun wavering that happens (which you can kind of see at the end of the above gif). 
+
+Next, I want to implement the textual koan thing (similar to what I did in [IE](https://github.com/mouseandthebillionaire/losFinisCDE/tree/main/docs/Process#04262025--busy-week)), and see how it feels. I think the plan is to trigger a text when any FSR (or combination) is held for some given time (we'll start with 1 minute?). I was initially going to use Byung-Chul Han's *[The disappearance of rituals](https://www.politybooks.com/bookdetail?book_slug=the-disappearance-of-rituals-a-topology-of-the-present--9781509542758)* due to the very ritualistic feeling of this, but I also thought it might be nice to read a new one *while* I'm making this (rather than reread and select from my notes) and so I have ordered a copy of *[Non-things](https://www.politybooks.com/bookdetail?book_slug=non-things-upheaval-in-the-lifeworld--9781509551699)* (which also feels super appropriate given that this project is in the 'playthings' section of the thesis). It will be nice to read this on the flight to Boulder and see what passages pop out as suitable. 
+
+The final question is what happens visually when (and after) the text is shown, but I think for now I'll just leave it as is. No change!
+
+
 ---
 ## Notes
 
