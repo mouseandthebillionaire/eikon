@@ -187,6 +187,13 @@ public class ArduinoCommunication : MonoBehaviour
     {
         try
         {
+            // Check if this is sensor data (comma-separated numbers) or status/debug message
+            if (rawData.Contains("Sensor") || rawData.Contains("Min:") || rawData.Contains("Max:"))
+            {
+                // This is a status/debug message, not sensor data
+                return;
+            }
+            
             // Expected format: "sensor1,sensor2,sensor3,sensor4,sensor5,sensor6"
             // Example: "1023,512,0,256,768,1023"
             
@@ -216,6 +223,33 @@ public class ArduinoCommunication : MonoBehaviour
                 {
                     Debug.LogWarning($"Failed to parse sensor {i} value: {values[i]}");
                     return;
+                }
+            }
+            
+            // DIRECTLY update FSR components - bypass the event system
+            FSR[] allFSRs = FindObjectsOfType<FSR>();
+            
+            for (int i = 0; i < sensorData.Length; i++)
+            {
+                // Find the FSR component with matching sensorId
+                FSR targetFSR = null;
+                foreach (FSR fsr in allFSRs)
+                {
+                    if (fsr.GetSensorId() == i)
+                    {
+                        targetFSR = fsr;
+                        break;
+                    }
+                }
+                
+                if (targetFSR != null)
+                {
+                    // Only update if sensor has meaningful data (not floating pin values)
+                    // Unconnected pins typically read very low values (< 10) or very high values (> 1000)
+                    if (sensorData[i].rawValue > 10 && sensorData[i].rawValue < 1000)
+                    {
+                        targetFSR.UpdateSensorDataDirect(sensorData[i]);
+                    }
                 }
             }
             

@@ -12,6 +12,7 @@ public class ShapeManager : MonoBehaviour
     [Header("Shape Scaling")]
     public Vector3 baseScale = Vector3.one; // Starting size of shapes
     public Vector3 maxScale = Vector3.one * 1.2f; // Maximum size when fully activated
+    public float randomScaleOffset = 0.25f;
     
     [Header("Random Positioning")]
     public bool enableRandomOffset = true; // Enable random position offsets
@@ -92,6 +93,14 @@ public class ShapeManager : MonoBehaviour
                     // Set the scale values from ShapeManager
                     shapeScript.SetBaseScale(baseScale);
                     shapeScript.SetMaxScale(maxScale);
+
+                    // Set slightly Random Size
+                    float randSizeAdjustment = Random.Range(-randomScaleOffset, randomScaleOffset);
+                    Vector3 adjustedSize = new Vector3(
+                        baseScale.x + randSizeAdjustment, 
+                        baseScale.y + randSizeAdjustment, 
+                        1);
+                    shapeScript.SetBaseScale(adjustedSize);
                     
                     // Assign FSR to the shape if requested
                     if (availableFSRs.Length > 0)

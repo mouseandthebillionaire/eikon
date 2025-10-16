@@ -5,9 +5,9 @@ public class FSR : MonoBehaviour
 {
     [Header("Sensor Configuration")]
     [SerializeField] private int sensorId = 0;
-    [Range(0f, 1f)]
     [SerializeField] public float force = 0.1f;
-    [SerializeField] public float timeHeld = 0f;
+    public float timeHeld = 0f;
+    public float currentHoldTime = 0f;
     
     
     [Header("Keyboard Testing")]
@@ -118,10 +118,12 @@ public class FSR : MonoBehaviour
         if (isActive)
         {
             timeHeld += (force * Time.deltaTime);
+            currentHoldTime += (force * Time.deltaTime);
         } else {
             if(timeHeld > 0f) {
                 timeHeld -= Time.deltaTime;
             }
+            currentHoldTime = 0f;
         }
     }
     
@@ -278,5 +280,54 @@ public class FSR : MonoBehaviour
         {
             Debug.LogWarning("Keyboard testing is disabled. Enable it first to simulate key release.");
         }
+    }
+    
+    // Method to set sensor ID
+    public void SetSensorId(int newSensorId)
+    {
+        sensorId = newSensorId;
+    }
+    
+    // Get sensor ID
+    public int GetSensorId()
+    {
+        return sensorId;
+    }
+    
+    [ContextMenu("Print Sensor Info")]
+    public void PrintSensorInfo()
+    {
+        Debug.Log($"FSR Sensor ID: {sensorId}, Force: {force}, TimeHeld: {timeHeld}, CurrentHoldTime: {currentHoldTime}");
+    }
+    
+    // Reset timeHeld and currentHoldTime to 0
+    public void ResetTimeHeld()
+    {
+        currentHoldTime = 0f;
+    }
+    
+    // Static method to reset all FSR instances
+    public static void ResetAllTimeHeld()
+    {
+        FSR[] allFSRs = FindObjectsOfType<FSR>();
+        foreach (FSR fsr in allFSRs)
+        {
+            fsr.ResetTimeHeld();
+        }
+    }
+    
+    // Public method for direct updates (bypassing event system)
+    public void UpdateSensorDataDirect(ForceSensorData newData)
+    {
+        currentData = newData;
+        lastValue = newData.normalizedValue;
+        force = newData.normalizedValue;
+        
+        // Update activation state based on sensor value
+        ForceSensorConfig config = GetSensorConfig();
+        bool shouldBeActive = force > config.activationThreshold;
+        UpdateActivationState(shouldBeActive);
+        
+        OnFSRValueChanged?.Invoke(this, newData);
     }
 }
