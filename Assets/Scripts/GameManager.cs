@@ -38,6 +38,7 @@ public class GameManager : MonoBehaviour
            fsrComponents[5].currentHoldTime > triggerTime)
         {
             TextManager.S.Koan();
+            AudioManager.S.PlayPhrase();
         }
     }
 }
