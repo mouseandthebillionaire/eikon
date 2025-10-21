@@ -37,7 +37,7 @@ public class AudioManager : MonoBehaviour
         FSR[] fsrComponents = FindObjectsOfType<FSR>();
 
         for(int i = 0; i < chordNotes.Length; i++){
-            chordNotes[i].volume = fsrComponents[i].currentHoldTime / 10f;
+            chordNotes[i].volume = fsrComponents[i].timeHeld / 10f;
             if(chordNotes[i].volume > 1f){
                 chordNotes[i].volume = 1f;
             }

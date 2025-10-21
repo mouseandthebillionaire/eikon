@@ -165,12 +165,15 @@
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
-      "command-palette:Open command palette": false,
-      "bases:Create new base": false
+      "command-palette:Open command palette": false
     }
   },
   "active": "f45619208928840c",
   "lastOpenFiles": [
+    "Temp/UnityTempFile-55e59ae8755524fdb9b2fdf06110b0ea",
+    "Temp/UnityTempFile-9aa148e59fd9d442bb5f5286edcf2ceb",
+    "Temp/ADB-Refreshb464aa9cba35844ba99b3f67e9c18187",
+    "Temp/ADB-Refreshf684058d1ed8044e59490016f3772c48",
     "Temp/ADB-Refreshaf0e323ad914b422e828ea401e8103f0",
     "Temp/ADB-Refreshff22918c6da9748a3a05098bb2e1160a",
     "Temp/ADB-Refresh3228f11b676cd462cbea84de088bfff3",
@@ -178,10 +181,6 @@
     "Temp/Burst/burst-aot9jpqzu8u.yjv",
     "Temp/Burst/burst-aot8wtykcgp.9jw",
     "Temp/Burst/burst-aotuy3bjynz.b2i",
-    "Temp/Burst/burst-aotyvqxxy4l.1v8",
-    "Temp/Burst/burst-aot70adapzi.l3u",
-    "Temp/Burst/burst-aotrvp3kb5d.dwr",
-    "Temp/Burst/burst-aotaeqpdddf.1q2",
     "Assets/Sprites/04_01.png",
     "Assets/Scripts/PiController_Wiring.md",
     "Assets/Resources/9/main.png",
