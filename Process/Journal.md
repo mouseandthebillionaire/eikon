@@ -70,6 +70,16 @@ Next, I want to implement the textual koan thing (similar to what I did in [IE](
 
 The final question is what happens visually when (and after) the text is shown, but I think for now I'll just leave it as is. No change!
 
+## 10.21.25 | Whaaat!?-bound
+
+Implemented the Koan thing, and then immediately broke everything trying to import the Audio directly from the IE project. Took a fair amount of time getting it all back in order, but I did it. Then spent the last few days getting the audio all implemented, and I'm almost all set. I leave for Whaaat!? early tomorrow, and just wanted to jot down a few things that I'd like to see in here before I showcase on Saturday:
+
+- It's hard to read the text through the bubbles. We could do it in a darker font, but maybe it's fine? Could do a full transition thing, but that seems like overkill. Something to test in situ
+- That being the case, job one is to get the board set up so that we're testing with the actual interface
+- Make it so that the cellos sounds are ducked by the phrase riffs
+- Might be nice to have the background color gradually transition between hues
+- There's not much else going on sound-wise; definitely need to spend some time with the interaction and see where it can be improved and/or pushed further
+
 
 ---
 ## Notes
