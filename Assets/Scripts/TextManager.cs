@@ -13,7 +13,11 @@ public class TextManager : MonoBehaviour
 
     private int    koanID;
     public  TextMeshProUGUI textDisplay;
+    public Image background;
     private bool isKoanTriggered = false;
+
+    public float backgroundFadeDuration = 1f;
+    public float targetBackgroundAlpha = 0.5f;
 
     public static TextManager S;
 
@@ -45,12 +49,14 @@ public class TextManager : MonoBehaviour
         currKoan = koans[koanID];
         textDisplay.text = currKoan;
 
+        StartCoroutine(FadeInBackground());
+
         Debug.Log($"Koan: {currKoan}");
         
         // Reset all FSR timeHeld and currentHoldTime values to 0
         FSR.ResetAllTimeHeld();
         
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(4f);
         
         // Fade out the text
         yield return StartCoroutine(FadeOutText());
@@ -61,6 +67,21 @@ public class TextManager : MonoBehaviour
         // Get next Koan ready
         koanID = (koanID + 1) % koans.Length;
 
+    }
+
+    private IEnumerator FadeInBackground()
+    {
+        float fadeDuration = 1f; // Duration of fade in seconds
+        float elapsedTime = 0f;
+        Color originalColor = background.color;
+        
+        while (elapsedTime < fadeDuration)
+        {
+            elapsedTime += Time.deltaTime;
+            float alpha = Mathf.Lerp(0f, targetBackgroundAlpha, elapsedTime / fadeDuration);
+            background.color = new Color(originalColor.r, originalColor.g, originalColor.b, alpha);
+            yield return null;
+        }
     }
     
     private IEnumerator FadeOutText()
@@ -73,7 +94,9 @@ public class TextManager : MonoBehaviour
         {
             elapsedTime += Time.deltaTime;
             float alpha = Mathf.Lerp(1f, 0f, elapsedTime / fadeDuration);
+            float backgroundAlpha = Mathf.Lerp(targetBackgroundAlpha, 0f, elapsedTime / fadeDuration);
             textDisplay.color = new Color(originalColor.r, originalColor.g, originalColor.b, alpha);
+            background.color = new Color(background.color.r, background.color.g, background.color.b, backgroundAlpha);
             yield return null;
         }
         
