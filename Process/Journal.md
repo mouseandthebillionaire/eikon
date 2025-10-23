@@ -80,6 +80,17 @@ Implemented the Koan thing, and then immediately broke everything trying to impo
 - Might be nice to have the background color gradually transition between hues
 - There's not much else going on sound-wise; definitely need to spend some time with the interaction and see where it can be improved and/or pushed further
 
+## 10.23.25 | Hardware
+
+![Hardware construction](Media/hardware.jpeg)
+
+Spent the last 24 hours getting the hardware all up and running. As the above image shows, I laid out the FSRs in a somewhat arbitrary pattern, which I think will work out fine. It all works in the Unity build (and will hopefully stay that way!)
+
+I've also added a fade-in / fade-out for the text. I think this looks fine, but the duration and intensity can be changed as I keep working.
+
+![Text Fade Example](Media/textFade.gif)
+
+In testing this with DR, I'm starting to think about the interaction a bit more. Right now the increase of the circles corresponds to a volume increase of six cello notes in an a-minor chord. Currently the sound continues once the user lifts up their hands, which I think makes sense as it is tied to the size of the circles, but it means that there isn't as much direct sonic feedback for the player. I'm thinking that rhythmic sounds tied to direct press could work. As you press harder the note triggers become faster. Something to try at least!
 
 ---
 ## Notes
