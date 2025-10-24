@@ -13,11 +13,18 @@ public class ShapeManager : MonoBehaviour
     public Vector3 baseScale = Vector3.one; // Starting size of shapes
     public Vector3 maxScale = Vector3.one * 1.2f; // Maximum size when fully activated
     public float randomScaleOffset = 0.25f;
-    
+
     [Header("Random Positioning")]
     public bool enableRandomOffset = true; // Enable random position offsets
     public float minOffset = 0.1f; // Minimum random offset
     public float maxOffset = 0.5f; // Maximum random offset
+    
+    [Header("Alpha Control")]
+    public bool enableAlphaControl = true; // Enable alpha control for all shapes
+    public float inactiveAlpha = 0.1f; // Alpha when FSR threshold not met
+    public float activeAlpha = 0.9f; // Alpha when FSR threshold is exceeded
+    public float currentHoldThreshold = 0.5f; // FSR currentHold threshold to trigger alpha change
+    public float alphaTransitionSpeed = 5f; // Speed of alpha transitions
 
     private static ShapeManager S;
     
@@ -114,6 +121,9 @@ public class ShapeManager : MonoBehaviour
                         
                         Debug.Log($"Shape {shapeIndex} (Row {row}, Col {col}) assigned to FSR: {assignedFSR.name}");
                     }
+                    
+                    // Set alpha settings from ShapeManager
+                    shapeScript.SetAlphaSettings(enableAlphaControl, inactiveAlpha, activeAlpha, currentHoldThreshold, alphaTransitionSpeed);
                 }
                 else
                 {
@@ -294,5 +304,45 @@ public class ShapeManager : MonoBehaviour
     {
         maxScale = scale;
         UpdateAllShapeScales();
+    }
+    
+    // Alpha control API
+    public void SetAlphaControl(bool enabled)
+    {
+        enableAlphaControl = enabled;
+        UpdateAllShapeAlphaSettings();
+    }
+    
+    public void SetInactiveAlpha(float alpha)
+    {
+        inactiveAlpha = Mathf.Clamp01(alpha);
+        UpdateAllShapeAlphaSettings();
+    }
+    
+    public void SetActiveAlpha(float alpha)
+    {
+        activeAlpha = Mathf.Clamp01(alpha);
+        UpdateAllShapeAlphaSettings();
+    }
+    
+    public void SetCurrentHoldThreshold(float threshold)
+    {
+        currentHoldThreshold = threshold;
+        UpdateAllShapeAlphaSettings();
+    }
+    
+    public void SetAlphaTransitionSpeed(float speed)
+    {
+        alphaTransitionSpeed = speed;
+        UpdateAllShapeAlphaSettings();
+    }
+    
+    private void UpdateAllShapeAlphaSettings()
+    {
+        ShapeScript[] shapes = GetComponentsInChildren<ShapeScript>();
+        foreach (ShapeScript shape in shapes)
+        {
+            shape.SetAlphaSettings(enableAlphaControl, inactiveAlpha, activeAlpha, currentHoldThreshold, alphaTransitionSpeed);
+        }
     }
 }

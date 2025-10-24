@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Audio;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -7,6 +8,14 @@ public class AudioManager : MonoBehaviour
     public AudioSource phrases;
     public AudioClip[] phraseClips;
     private int phraseIndex = 0;
+
+    public int scoreStageIndex = 0;
+    private int stageDirection = 1; // 1 for forward, -1 for backward
+    
+    [Header("Audio Mixer")]
+    public AudioMixer mainMixer;
+    public AudioMixerSnapshot[] mixerSnapshots; // Array of snapshots corresponding to scoreStages
+    public float transitionTime = 2.0f; // Time for snapshot transitions
 
     public AudioSource[] chordNotes;
 
@@ -29,9 +38,14 @@ public class AudioManager : MonoBehaviour
     void Start()
     {
         S = this;   
+        ResetScore();
     }
 
     void Update(){
+
+        if(Input.GetKeyDown(KeyCode.Space)){
+            NextStage();
+        }
 
         // Get all FSR components
         FSR[] fsrComponents = FindObjectsOfType<FSR>();
@@ -72,6 +86,7 @@ public class AudioManager : MonoBehaviour
     public void PlayTransition(){
         transition.clip = transitionClips[Random.Range(0, transitionClips.Length)];
         transition.Play();
+        NextStage();
     }
 
     private IEnumerator FadeInVolume(int index)
@@ -171,6 +186,35 @@ public class AudioManager : MonoBehaviour
         
         // Ensure final volume is set
         nodeNotes[index].volume = 0f;
+    }
+
+    public void NextStage(){
+        scoreStageIndex += stageDirection;
+        
+        // Check if we've reached the end of the array (going forward)
+        if (scoreStageIndex >= mixerSnapshots.Length - 1 && stageDirection > 0)
+        {
+            stageDirection = -1; // Switch to going backward
+        }
+        // Check if we've reached the beginning of the array (going backward)
+        else if (scoreStageIndex <= 0 && stageDirection < 0)
+        {
+            stageDirection = 1; // Switch to going forward
+        }
+        
+        
+        // Transition to the appropriate mixer snapshot
+        if (mixerSnapshots != null && scoreStageIndex < mixerSnapshots.Length && mixerSnapshots[scoreStageIndex] != null)
+        {
+            mixerSnapshots[scoreStageIndex].TransitionTo(transitionTime);
+        }
+    }
+
+    public void ResetScore(){
+        scoreStageIndex = -1;
+        stageDirection = 1; // Reset to forward direction
+        NextStage();
+
     }
 
 }

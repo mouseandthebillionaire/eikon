@@ -17,6 +17,7 @@ public class ShapeScript : MonoBehaviour
     [SerializeField] private bool enableRotationAnimation = true;
     [SerializeField] private Vector3 baseRotation;
     [SerializeField] private float rotationRate = 90f; // degrees per second
+    
 
     // Shape Animation
     private SpriteRenderer sr;
@@ -40,6 +41,15 @@ public class ShapeScript : MonoBehaviour
     private bool isActive = false;
     private float currentIntensity = 0f;
     
+    // Alpha control state (values from ShapeManager)
+    private bool enableAlphaControl = true;
+    private float inactiveAlpha = 0.1f;
+    private float activeAlpha = 0.9f;
+    private float currentHoldThreshold = 0.5f;
+    private float alphaTransitionSpeed = 5f;
+    private float targetAlpha;
+    private bool isAlphaActivated = false;
+    
     void Start()
     {
         InitializeShape();
@@ -55,6 +65,7 @@ public class ShapeScript : MonoBehaviour
     {
         UpdateScaleAnimation();
         UpdateRotationAnimation();
+        UpdateAlphaControl();
     }
     
     private void InitializeShape()
@@ -73,6 +84,15 @@ public class ShapeScript : MonoBehaviour
         frames = Resources.LoadAll<Sprite>("Circles");
         // Start the Animation
         StartCoroutine(ShapeAnimation());
+        
+        // Initialize alpha control
+        if (enableAlphaControl && sr != null)
+        {
+            targetAlpha = inactiveAlpha;
+            Color currentColor = sr.color;
+            currentColor.a = targetAlpha;
+            sr.color = currentColor;
+        }
     }
     
     private void AssignFSR()
@@ -261,6 +281,31 @@ public class ShapeScript : MonoBehaviour
         transform.localEulerAngles = targetRotation;
     }
     
+    private void UpdateAlphaControl()
+    {
+        if (!enableAlphaControl || sr == null || assignedFSR == null) return;
+        
+        // Check if FSR's currentHold value exceeds threshold
+        bool shouldBeActivated = assignedFSR.currentHoldTime > currentHoldThreshold;
+        
+        // Update target alpha based on threshold
+        if (shouldBeActivated && !isAlphaActivated)
+        {
+            targetAlpha = activeAlpha;
+            isAlphaActivated = true;
+        }
+        else if (!shouldBeActivated && isAlphaActivated)
+        {
+            targetAlpha = inactiveAlpha;
+            isAlphaActivated = false;
+        }
+        
+        // Smoothly transition to target alpha
+        Color currentColor = sr.color;
+        currentColor.a = Mathf.Lerp(currentColor.a, targetAlpha, Time.deltaTime * alphaTransitionSpeed);
+        sr.color = currentColor;
+    }
+    
     // Public API for external control
     public void SetScaleAnimation(bool enabled)
     {
@@ -311,5 +356,27 @@ public class ShapeScript : MonoBehaviour
     public void SetAnimationSpeed(float speed)
     {
         animationSpeed = speed;
+    }
+    
+    // Alpha control API - receives settings from ShapeManager
+    public void SetAlphaSettings(bool enabled, float inactive, float active, float threshold, float speed)
+    {
+        enableAlphaControl = enabled;
+        inactiveAlpha = Mathf.Clamp01(inactive);
+        activeAlpha = Mathf.Clamp01(active);
+        currentHoldThreshold = threshold;
+        alphaTransitionSpeed = speed;
+        
+        if (!enabled && sr != null)
+        {
+            Color currentColor = sr.color;
+            currentColor.a = 1f; // Reset to full opacity
+            sr.color = currentColor;
+        }
+        else if (enabled && sr != null)
+        {
+            // Update target alpha based on current state
+            targetAlpha = isAlphaActivated ? activeAlpha : inactiveAlpha;
+        }
     }
 }

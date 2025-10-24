@@ -17,6 +17,7 @@ public class TextManager : MonoBehaviour
     private bool isKoanTriggered = false;
 
     public float backgroundFadeDuration = 1f;
+    public float textDisplayDuration = 4f;
     public float targetBackgroundAlpha = 0.5f;
 
     public static TextManager S;
@@ -102,6 +103,7 @@ public class TextManager : MonoBehaviour
         
         // Ensure alpha is exactly 0
         textDisplay.color = new Color(originalColor.r, originalColor.g, originalColor.b, 0f);
+        AudioManager.S.PlayTransition();
     }
 
     public void ClearText()
