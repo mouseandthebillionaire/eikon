@@ -92,6 +92,18 @@ I've also added a fade-in / fade-out for the text. I think this looks fine, but 
 
 In testing this with DR, I'm starting to think about the interaction a bit more. Right now the increase of the circles corresponds to a volume increase of six cello notes in an a-minor chord. Currently the sound continues once the user lifts up their hands, which I think makes sense as it is tied to the size of the circles, but it means that there isn't as much direct sonic feedback for the player. I'm thinking that rhythmic sounds tied to direct press could work. As you press harder the note triggers become faster. Something to try at least!
 
+## 10.23.24 | Second Hardware Implementation
+
+![Second Version of Hardware](Media/hardware2.jpg)
+
+Once I added the layer of neoprene to the first iteration of this it became clear that the FSRs were both too small and too far apart. The desire was that the force would dissipate through the material and create sections where multiple FSRs could be triggered, but it didn't work quite right. So I ended up moving the FSRs to a smaller board and grouped them closer together. I put them more in a line, and added this faux leather strip to better indicate the touchable space. It still feels exploratory, but not quite as elegant as I would like. But, all in all, for a first showing of this idea, I think it's going to work.[^5]
+
+I wasn't happy with the non-progressive audio - wanting something that a) sounded better, and b) would incentivize people to spend more time with it - so I reimplemented the score from [An Invitation to Play](https://github.com/mouseandthebillionaire/aitp) which fits in nicely. I'm still uncertain if people will actually sit and hold a single FSR for 10 seconds. That seems to be asking a lot. But I'll be able to tweak that once it's installed and I've done some observation.
+
+I also added in an opacity change to the group of circles to better indicate when it has been touched, and this is definitely working better than it was before. We don't see all the circles at once, but I think that's actually nicer?
+
+I still haven't added the color changing effect in the background, but should be easy to get to once I knock out this [Experimental Games Showcase](https://www.experimentalgamesshowcase.com) application. Which is now job 1!
+
 ---
 ## Notes
 
@@ -99,3 +111,4 @@ In testing this with DR, I'm starting to think about the interaction a bit more.
 [^2]: Which, not gonna lie, not a terrible idea, Haha
 [^3]: If I've learned one thing from teaching, it's don't count on things to work out down the road...
 [^4]: The whole thing also feels very [Digital Yoga](https://github.com/mouseandthebillionaire/digitalYoga) which is a fun throwback - if only just for me
+[^5]: Fingers crossed 
