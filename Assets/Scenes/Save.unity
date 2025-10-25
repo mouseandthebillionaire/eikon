@@ -429,6 +429,58 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8350708931962766043, guid: 0590d3776266d467c8f23f024230f067, type: 3}
   m_PrefabInstance: {fileID: 347326243}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &80999569
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 80999570}
+  - component: {fileID: 80999571}
+  m_Layer: 0
+  m_Name: Debug
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &80999570
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 80999569}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1480687025}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &80999571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 80999569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79d95b436a8eb42939f63b7fe300dd9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoSetupOnStart: 1
+  createGameLogger: 1
+  createBuildLogger: 1
+  createLogViewer: 1
+  enableFileLogging: 1
+  enableConsoleLogging: 1
+  enableRuntimeViewer: 1
+  minimumLogLevel: 2
 --- !u!1 &92681605
 GameObject:
   m_ObjectHideFlags: 0
@@ -1322,7 +1374,7 @@ MonoBehaviour:
   m_RequiresOpaqueTextureOption: 2
   m_CameraType: 0
   m_Cameras: []
-  m_RendererIndex: 0
+  m_RendererIndex: 1
   m_VolumeLayerMask:
     serializedVersion: 2
     m_Bits: 1
@@ -2447,6 +2499,61 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &886351532
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 886351534}
+  - component: {fileID: 886351533}
+  m_Layer: 0
+  m_Name: BuildErrorLogger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &886351533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 886351532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d085fb3a152745feb24943dd5594372, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enableBuildLogging: 1
+  logBuildStart: 1
+  logBuildEnd: 1
+  logBuildErrors: 1
+  logBuildWarnings: 1
+  logBuildInfo: 1
+  buildLogFileName: BuildLog
+  appendTimestampToFileName: 1
+  buildLogFilePath: 
+  buildLogs: []
+  isBuildInProgress: 0
+--- !u!4 &886351534
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 886351532}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &930014221 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8350708931962766043, guid: 0590d3776266d467c8f23f024230f067, type: 3}
@@ -3319,6 +3426,7 @@ Transform:
   - {fileID: 519420032}
   - {fileID: 619394802}
   - {fileID: 870956549}
+  - {fileID: 80999570}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1496300741 stripped
@@ -4931,10 +5039,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1000, y: 600}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -5867,7 +5975,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c89ee84e068a046818630b9d887a85f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  portName: /dev/cu.usbmodem142401
+  portName: 
   baudRate: 9600
   dataBits: 8
   parity: 0
@@ -5877,6 +5985,8 @@ MonoBehaviour:
   dataTimeout: 1
   maxRetryAttempts: 3
   retryDelay: 2
+  portScanInterval: 2
+  enableContinuousMonitoring: 1
 --- !u!4 &2055345607 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2681187803353124836, guid: 126ca95b9c6e74387ae2ac36f561ffcf, type: 3}
@@ -6186,3 +6296,4 @@ SceneRoots:
   - {fileID: 1666975532}
   - {fileID: 1816117496}
   - {fileID: 739692814}
+  - {fileID: 886351534}

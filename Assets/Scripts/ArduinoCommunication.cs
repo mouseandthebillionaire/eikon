@@ -19,11 +19,16 @@ public class ArduinoCommunication : MonoBehaviour
     [SerializeField] private float dataTimeout = 1f;
     [SerializeField] private int maxRetryAttempts = 3;
     [SerializeField] private float retryDelay = 2f;
+    [SerializeField] private float portScanInterval = 2f; // How often to scan for new ports
+    [SerializeField] private bool enableContinuousMonitoring = true;
     
     private SerialPort serialPort;
     private bool isConnected = false;
     private Coroutine connectionCoroutine;
     private Coroutine dataTimeoutCoroutine;
+    private Coroutine portMonitoringCoroutine;
+    private string lastKnownPort = "";
+    private HashSet<string> knownPorts = new HashSet<string>();
     
     // Events for sensor data
     public static event Action<ForceSensorData[]> OnSensorDataReceived;
@@ -33,11 +38,23 @@ public class ArduinoCommunication : MonoBehaviour
     void Start()
     {
         ConnectToArduino();
+        
+        // Start continuous port monitoring if enabled
+        if (enableContinuousMonitoring)
+        {
+            StartPortMonitoring();
+        }
     }
     
     void OnDestroy()
     {
         DisconnectFromArduino();
+        
+        // Stop port monitoring
+        if (portMonitoringCoroutine != null)
+        {
+            StopCoroutine(portMonitoringCoroutine);
+        }
     }
     
     public void ConnectToArduino()
@@ -75,6 +92,7 @@ public class ArduinoCommunication : MonoBehaviour
     {
         bool connectionSuccessful = false;
         string errorMessage = "";
+        string targetPort = portName; // Declare outside the loop
         
         for (int attempt = 1; attempt <= maxRetryAttempts; attempt++)
         {
@@ -85,7 +103,7 @@ public class ArduinoCommunication : MonoBehaviour
             Debug.Log($"Available ports: {string.Join(", ", availablePorts)}");
             
             // Auto-detect Arduino port if enabled and no port specified
-            string targetPort = portName;
+            targetPort = portName;
             Debug.Log($"Current portName setting: '{portName}'");
             Debug.Log($"Auto-detect enabled: {autoDetectPort}");
             Debug.Log($"Port name is empty: {string.IsNullOrEmpty(portName)}");
@@ -173,8 +191,10 @@ public class ArduinoCommunication : MonoBehaviour
         if (connectionSuccessful && serialPort != null && serialPort.IsOpen)
         {
             isConnected = true;
+            lastKnownPort = targetPort; // Store the successful port
+            knownPorts.Add(targetPort); // Add to known ports
             OnConnectionStatusChanged?.Invoke(true);
-            Debug.Log($"Successfully connected to Arduino on {portName}");
+            Debug.Log($"Successfully connected to Arduino on {targetPort}");
             
             // Start reading data
             StartCoroutine(ReadDataCoroutine());
@@ -362,55 +382,6 @@ public class ArduinoCommunication : MonoBehaviour
         }
     }
     
-    // Port detection method
-    private string DetectArduinoPort(string[] availablePorts)
-    {
-        // Common Arduino port patterns for different operating systems
-        string[] arduinoPatterns = {
-            // macOS patterns
-            "cu.usbmodem", "cu.usbserial", "cu.SLAB_USBtoUART",
-            // Windows patterns  
-            "COM", "COM1", "COM2", "COM3", "COM4", "COM5", "COM6", "COM7", "COM8", "COM9",
-            // Linux patterns
-            "ttyUSB", "ttyACM", "tty.usbmodem", "tty.usbserial"
-        };
-        
-        Debug.Log("Scanning for Arduino ports...");
-        Debug.Log($"Total available ports: {availablePorts.Length}");
-        
-        foreach (string port in availablePorts)
-        {
-            Debug.Log($"Checking port: {port}");
-            
-            foreach (string pattern in arduinoPatterns)
-            {
-                if (port.Contains(pattern))
-                {
-                    Debug.Log($"Found potential Arduino port: {port} (matches pattern: {pattern})");
-                    
-                    // Try to test the port by attempting to open it briefly
-                    if (TestPort(port))
-                    {
-                        Debug.Log($"Port {port} is available and responsive");
-                        return port;
-                    }
-                    else
-                    {
-                        Debug.LogWarning($"Port {port} found but not responsive (might be in use)");
-                    }
-                }
-            }
-        }
-        
-        Debug.LogWarning("No Arduino ports detected. Make sure:");
-        Debug.LogWarning("1. Arduino is connected via USB");
-        Debug.LogWarning("2. Arduino IDE Serial Monitor is closed");
-        Debug.LogWarning("3. No other applications are using the port");
-        Debug.LogWarning("4. Arduino drivers are installed");
-        Debug.LogWarning("5. Try unplugging and reconnecting the Arduino");
-        
-        return null;
-    }
     
     private bool TestPort(string portName)
     {
@@ -634,6 +605,167 @@ public class ArduinoCommunication : MonoBehaviour
         Debug.Log($"================================");
     }
     
+    // Continuous port monitoring
+    private void StartPortMonitoring()
+    {
+        if (portMonitoringCoroutine != null)
+        {
+            StopCoroutine(portMonitoringCoroutine);
+        }
+        portMonitoringCoroutine = StartCoroutine(PortMonitoringCoroutine());
+    }
+    
+    private IEnumerator PortMonitoringCoroutine()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(portScanInterval);
+            
+            // Check if we're currently connected
+            if (!IsConnected())
+            {
+                Debug.Log("Not connected, scanning for Arduino ports...");
+                ScanForArduinoPorts();
+            }
+            else
+            {
+                // We're connected, but check if the port is still valid
+                if (!IsPortStillValid())
+                {
+                    Debug.LogWarning("Current port is no longer valid, attempting to reconnect...");
+                    DisconnectFromArduino();
+                    yield return new WaitForSeconds(1f); // Brief pause before reconnecting
+                    ConnectToArduino();
+                }
+            }
+        }
+    }
+    
+    private void ScanForArduinoPorts()
+    {
+        string[] availablePorts = SerialPort.GetPortNames();
+        Debug.Log($"Scanning {availablePorts.Length} available ports...");
+        
+        // Look for new Arduino ports
+        foreach (string port in availablePorts)
+        {
+            if (IsArduinoPort(port) && !knownPorts.Contains(port))
+            {
+                Debug.Log($"Found new Arduino port: {port}");
+                knownPorts.Add(port);
+                
+                // Try to connect to this new port
+                if (!IsConnected())
+                {
+                    Debug.Log($"Attempting to connect to new Arduino port: {port}");
+                    portName = port;
+                    ConnectToArduino();
+                    break; // Only try one port at a time
+                }
+            }
+        }
+    }
+    
+    private bool IsPortStillValid()
+    {
+        if (serialPort == null || !serialPort.IsOpen)
+        {
+            return false;
+        }
+        
+        try
+        {
+            // Try to read from the port to see if it's still responsive
+            if (serialPort.BytesToRead > 0)
+            {
+                serialPort.ReadExisting(); // Clear any buffered data
+            }
+            return true;
+        }
+        catch
+        {
+            return false;
+        }
+    }
+    
+    private bool IsArduinoPort(string portName)
+    {
+        // Enhanced Arduino port detection
+        string[] arduinoPatterns = {
+            // macOS patterns
+            "cu.usbmodem", "cu.usbserial", "cu.SLAB_USBtoUART",
+            // Windows patterns  
+            "COM", "COM1", "COM2", "COM3", "COM4", "COM5", "COM6", "COM7", "COM8", "COM9",
+            // Linux patterns
+            "ttyUSB", "ttyACM", "tty.usbmodem", "tty.usbserial"
+        };
+        
+        foreach (string pattern in arduinoPatterns)
+        {
+            if (portName.Contains(pattern))
+            {
+                return true;
+            }
+        }
+        
+        return false;
+    }
+    
+    // Enhanced port detection with better validation
+    private string DetectArduinoPort(string[] availablePorts)
+    {
+        Debug.Log("Enhanced Arduino port detection...");
+        Debug.Log($"Total available ports: {availablePorts.Length}");
+        
+        // First, try to find ports that match Arduino patterns
+        List<string> candidatePorts = new List<string>();
+        
+        foreach (string port in availablePorts)
+        {
+            Debug.Log($"Checking port: {port}");
+            
+            if (IsArduinoPort(port))
+            {
+                Debug.Log($"Found potential Arduino port: {port}");
+                candidatePorts.Add(port);
+            }
+        }
+        
+        // Test each candidate port
+        foreach (string port in candidatePorts)
+        {
+            Debug.Log($"Testing Arduino port: {port}");
+            
+            if (TestPort(port))
+            {
+                Debug.Log($"Successfully validated Arduino port: {port}");
+                return port;
+            }
+        }
+        
+        Debug.LogWarning("No valid Arduino ports found");
+        return null;
+    }
+    
+    
+    // Public method to manually trigger port scan
+    [ContextMenu("Scan for Arduino Ports")]
+    public void ManualPortScan()
+    {
+        Debug.Log("Manual port scan triggered");
+        ScanForArduinoPorts();
+    }
+    
+    // Public method to reset port detection
+    [ContextMenu("Reset Port Detection")]
+    public void ResetPortDetection()
+    {
+        knownPorts.Clear();
+        lastKnownPort = "";
+        portName = "";
+        Debug.Log("Port detection reset - will scan for new ports");
+    }
+
     // Public properties for inspector
     public string PortName => portName;
     public int BaudRate => baudRate;
