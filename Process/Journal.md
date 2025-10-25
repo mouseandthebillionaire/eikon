@@ -104,6 +104,20 @@ I also added in an opacity change to the group of circles to better indicate whe
 
 I still haven't added the color changing effect in the background, but should be easy to get to once I knock out this [Experimental Games Showcase](https://www.experimentalgamesshowcase.com) application. Which is now job 1!
 
+## 10.24.25 | EGS Application 
+
+**Please give us a one paragraph description of the game concept:**
+
+_Eikon_ is a playful exploration in how the physical interfaces of games can be objects of and vehicles for contemplation. Players place their hands on a simple-looking board that can sense the degree of force applied at certain points. By slowly moving their fingers, exploring the contours of the interface, and applying varying degrees of pressure, they are presented with an ever-changing array of abstract minimalist visuals and a complex ambient soundscape. The entire experience echoes the ritualistic aspects of ceremonial objects (prayer candles, tea ceremonies, stained-glass, mandalas, idols, etc) and how they can be used to point out to something larger about the external world. 
+
+**Explain what makes the game experimental (max 200 words)?**
+
+_Eikon_ is the latest piece in an ongoing PhD thesis exploring an aesthetic of 'contemplative play,' a play with the potential to highlight the nature of the world around us, and our place in it. Where many games guide the player through specified challenges and defined narratives, contemplative play points the player toward an openness that invites deeper, more ambiguous introspection, serving as an antidote to an age of fractured attention and instrumentalized leisure.
+
+For the EGS, I would like to discuss _Eikon_ as part of this larger body of work, including *Lest Ten Horizons Cry* and *Instauratio Exiguus*. These projects are specifically designed to instigate contemplative experiences, leveraging non-obvious, obtuse physical interfaces to introduce ambiguity into the gameplay. The player is left to explore what these unfamiliar objects do, spending time investigating the playful environments without explicit goals. This interaction (what philosopher Byung-Chul Han calls *ceremonious inactivity*) brings about a reflective mode that points back to the larger world and the technology we rely on. 
+
+
+
 ---
 ## Notes
 
