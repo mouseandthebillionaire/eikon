@@ -3229,7 +3229,7 @@ MonoBehaviour:
   textDisplay: {fileID: 0}
   background: {fileID: 2117891980}
   backgroundFadeDuration: 1
-  textDisplayDuration: 7
+  textDisplayDuration: 10
   targetBackgroundAlpha: 0.7
 --- !u!1 &1419762824
 GameObject:
@@ -3399,7 +3399,7 @@ MonoBehaviour:
   - 0
   - 0
   - 0
-  triggerTime: 10
+  triggerTime: 8
   fsr0CurrentHoldTime: 0
   fsr1CurrentHoldTime: 0
   fsr2CurrentHoldTime: 0

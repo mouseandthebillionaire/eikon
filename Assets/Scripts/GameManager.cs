@@ -28,6 +28,10 @@ public class GameManager : MonoBehaviour
         S = this;
     }
 
+    void Start(){
+        Cursor.visible = false; 
+    }
+
     // Update is called once per frame
     void Update()
     {
