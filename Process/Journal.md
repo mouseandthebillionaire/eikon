@@ -116,6 +116,29 @@ _Eikon_ is the latest piece in an ongoing PhD thesis exploring an aesthetic of '
 
 For the EGS, I would like to discuss _Eikon_ as part of this larger body of work, including *Lest Ten Horizons Cry* and *Instauratio Exiguus*. These projects are specifically designed to instigate contemplative experiences, leveraging non-obvious, obtuse physical interfaces to introduce ambiguity into the gameplay. The player is left to explore what these unfamiliar objects do, spending time investigating the playful environments without explicit goals. This interaction (what philosopher Byung-Chul Han calls *ceremonious inactivity*) brings about a reflective mode that points back to the larger world and the technology we rely on. 
 
+## 10.27.25 | Koans
+
+The Whaaat!? Showcase is over and it went fairly well. I will do a deep debrief (perhaps tomorrow) after I sit with this for a while, but I think there is a lot to learn from this experiment. For now, I just wanted to jot down the text that I had pulled from Byung-Chul Han's *Non-things* and used in this version. The file is [here](../Assets/Resources/Koans.txt), but I thought it would be good to have it in the main process documentation as well.
+
+- We are now in the habit of perceiving reality in terms of attraction and surprise.
+- The world is becoming increasingly intangible, cloudlike and ghostly 
+- It is not possible to linger on information. It is relevant only fleetingly.
+- Information by itself does not illuminate the world
+- Today, we pursue information without gaining knowledge
+- We take notice of everything without gaining any insight
+- We travel across the world without having an experience
+- We communicate incessantly without participating in community
+- We collect vast quantities of data without following up on our recollections
+- We accumulate friends and followers without meeting an other
+- A machine does not free the hand from work, but an informaton does
+- We prefer experiencing to possessing being to having
+- The more I experience, the more I am 
+- Fate has no place in the digital order 
+- Without bodily touch, no ties can emerge 
+- The time of things is past 
+- Through all my swiping, I submit the world to my needs 
+- The truly beautiful cannot be touched. It demands distance
+
 
 
 ---
