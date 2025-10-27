@@ -82,7 +82,7 @@ Implemented the Koan thing, and then immediately broke everything trying to impo
 
 ## 10.23.25 | Hardware
 
-![Hardware construction](Media/hardware.jpeg){width=50%}
+<img src="Media/hardware.jpeg" alt="Hardware construction">
 
 Spent the last 24 hours getting the hardware all up and running. As the above image shows, I laid out the FSRs in a somewhat arbitrary pattern, which I think will work out fine. It all works in the Unity build (and will hopefully stay that way!)
 

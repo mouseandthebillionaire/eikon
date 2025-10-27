@@ -171,6 +171,8 @@
   },
   "active": "f45619208928840c",
   "lastOpenFiles": [
+    "README.md",
+    "Process/Journal.md",
     "Temp/ADB-Refresh86ece99a8d76847d593927bf91502676",
     "Temp/ADB-Refresh4a43df30d300c4078817cbc72050dc81",
     "Temp/ADB-Refreshb0d53fdd6b8d3476f889b443136e88a5",
@@ -181,7 +183,6 @@
     "Builds/v0.1.app/Contents/_CodeSignature/CodeResources",
     "Library/Bee/artifacts/MacStandalonePlayerBuildProgram/AsyncPluginsFromLinkerSymbols/no_symbols_were_generated.txt",
     "Library/Bee/artifacts/MacStandalonePlayerBuildProgram/AsyncPluginsFromLinker/lib_burst_generated.bundle",
-    "Builds/Eikon_BurstDebugInformation_DoNotShip/v0.1.app/Contents/Plugins",
     "COMPILATION_FIX_GUIDE.md",
     "ERROR_LOGGING_SETUP.md",
     "Process/Media/hardware2.jpg",
@@ -196,9 +197,7 @@
     "Assets/Resources/9/4.png",
     "Assets/Resources/9/3.png",
     "().md",
-    "Process/Journal.md",
     "Tools/venv/lib/python3.13/site-packages/numpy/random/LICENSE.md",
-    "README_frame_extractor.md",
-    "README.md"
+    "README_frame_extractor.md"
   ]
 }
