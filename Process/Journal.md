@@ -139,6 +139,18 @@ The Whaaat!? Showcase is over and it went fairly well. I will do a deep debrief 
 - Through all my swiping, I submit the world to my needs 
 - The truly beautiful cannot be touched. It demands distance
 
+## 10.28.15 | Whaaat!? Post-mortem
+
+![Whaaat!!? Setup](Media/whaaatShowcase.jpg)
+
+Thoughts and reflections after showing this piece last weekend, in no order particular order
+
+- I find myself in the strange situation where I am making things that (if I were seeing it as an outsider) I would probably think were dumb. It looked good. It sounded great. But it's off. It's too on the nose. It's too new-agey, perhaps? The whole approach to contemplation feels off and/or obvious.
+- I think for me the texts are one of the main culprits. What feels deep and thought-provoking on the written page (and in context with the rest of the material) feels a little wooey in isolation. It's not terrible; it's just that I feel like I can do better than this. One possible way forward would have this be more narrative. When you unlock a section it tells the next part of the story. The problem obviously being that the story had better be well-written. The problem also being that it would be easy to rely or fall back on seemingly 'powerful' stories, which seems like cheating. What might a version of this feel like with a story from EJB embedded in here? Worth an iteration, I think.
+- While showing this, I kept thinking about the experience of [IE](https://github.com/mouseandthebillionaire/losFinisCDE) which I think was more successful. Obviously the interface was more robust (having been built over a longer time-frame), but I think the interaction was also better. There's something to be said for the 'puzzly' aspect of finding the correct location. Could there be a version of this where you are more guided to finding locations on the mat. The current exploration-style is good, but perhaps too open. 
+- The fingers on the mat also make me think about [Digital Yoga](https://github.com/mouseandthebillionaire/digitalYoga) (as do the circles, [as I mentioned earlier](^4)) which I think could make for an interesting mash-up. The original DY clearly marked where you were supposed to put your fingers, but this could be a version where you see what's happening on the screen and are trying to mimic that placement on the mat. Much more possibility for playfulness (and definitely humor). Not sure if that's a worth-while direction to go in, but perhaps. If so, I think it would be best to have it be _mechanically_ influenced, rather than _thematically_.
+- The other idea that I have batted around is that [amiibo situation](## 10.05.25 | Ideation) from the original ideation which I still think has some legs. The objects themselves would have to be meaningful. But it definitely speaks to the play-thing aspect. Or does it? If you are hiding a thing in the box, are you playing with it? I suppose so? Either way, still want to think on this for future iterations.
+- In all of this, I think the big question is "how do you add back the PLAY part of contemplative play?" It's (generally) easy to make something fun. It's (somewhat) easy to make something thoughtful. But how do you do both?
 
 
 ---
