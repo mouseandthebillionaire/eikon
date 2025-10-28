@@ -171,6 +171,9 @@
   },
   "active": "f45619208928840c",
   "lastOpenFiles": [
+    "Arduino/ForceSensor/ForceSensorExample.ino",
+    "Arduino/ForceSensor",
+    "Arduino/ForceSensor.ino",
     "().md",
     "Process/Journal.md",
     "Media/whaaat.md",
@@ -184,8 +187,6 @@
     "README.md",
     "Temp/ADB-Refresh86ece99a8d76847d593927bf91502676",
     "Temp/ADB-Refresh4a43df30d300c4078817cbc72050dc81",
-    "Temp/ADB-Refreshb0d53fdd6b8d3476f889b443136e88a5",
-    "Temp/ADB-Refresh14871e2e098e1476fa0067b39a4776f4",
     "COMPILATION_FIX_GUIDE.md",
     "ERROR_LOGGING_SETUP.md",
     "Process/Media/hardware2.jpg",
