@@ -151,7 +151,15 @@ Thoughts and reflections after showing this piece last weekend, in no order part
 - The fingers on the mat also make me think about [Digital Yoga](https://github.com/mouseandthebillionaire/digitalYoga) (as do the circles, [as I mentioned earlier](^4)) which I think could make for an interesting mash-up. The original DY clearly marked where you were supposed to put your fingers, but this could be a version where you see what's happening on the screen and are trying to mimic that placement on the mat. Much more possibility for playfulness (and definitely humor). Not sure if that's a worth-while direction to go in, but perhaps. If so, I think it would be best to have it be _mechanically_ influenced, rather than _thematically_.
 - The other idea that I have batted around is that [amiibo situation](## 10.05.25 | Ideation) from the original ideation which I still think has some legs. The objects themselves would have to be meaningful. But it definitely speaks to the play-thing aspect. Or does it? If you are hiding a thing in the box, are you playing with it? I suppose so? Either way, still want to think on this for future iterations.
 - In all of this, I think the big question is "how do you add back the PLAY part of contemplative play?" It's (generally) easy to make something fun. It's (somewhat) easy to make something thoughtful. But how do you do both?
+- Lastly, people really wanted to poke at this thing. They are either too used to phones, game-controllers, or are too timid to lay their hands on top of the mat. They would much rather prod at it, which I don't think lends itself to the contemplative aspects of the thing? But I could be wrong!
 
+## 10.30.25 | Moving Forward
+
+Reflecting on this more (and in conversation with PB) and wondering how to best move this forward and I'm left with two big questions. First, is it possible to put the 'play' back in 'contemplative play?' Second, how do you get people to touch the thing in the 'appropriate' way.
+
+I have been invited to show a thing at the [Radio Snack] birthday party event, so I think I will do another pass at this and see if I can't solve these nagging questions. Ideation brewing and more to come.
+
+Onward!
 
 ---
 ## Notes
