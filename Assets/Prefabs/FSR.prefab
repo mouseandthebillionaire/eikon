@@ -44,3 +44,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78c6c9a658c24479e8ed36f13c09db54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sensorId: 0
+  force: 0.1
+  timeHeld: 0
+  currentHoldTime: 0
+  testKey: 32
+  isKeyboardPressed: 0
+  showDebugInfo: 0
+  logValueChanges: 0

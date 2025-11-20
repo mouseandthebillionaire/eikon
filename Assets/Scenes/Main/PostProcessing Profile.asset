@@ -18,7 +18,7 @@ MonoBehaviour:
     m_Value: 1
   fade:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 0.259
   intensity:
     m_OverrideState: 0
     m_Value: 1
@@ -68,13 +68,13 @@ MonoBehaviour:
     m_Value: 46
   colorFilter:
     m_OverrideState: 1
-    m_Value: {r: 1, g: 0.8254717, b: 0.9074471, a: 1}
+    m_Value: {r: 1, g: 0, b: 1, a: 1}
   hueShift:
     m_OverrideState: 1
-    m_Value: -160
+    m_Value: -126
   saturation:
     m_OverrideState: 1
-    m_Value: -10
+    m_Value: -50
 --- !u!114 &-17948850271617951
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -93,13 +93,13 @@ MonoBehaviour:
     m_Value: 1
   Intensity:
     m_OverrideState: 1
-    m_Value: 0.64
+    m_Value: 1.23
   Frequency:
     m_OverrideState: 1
-    m_Value: 15
+    m_Value: 82
   Speed:
     m_OverrideState: 1
-    m_Value: 0.015
+    m_Value: 0.506
   center:
     m_OverrideState: 0
     m_Value: {x: 0, y: 0}
@@ -159,7 +159,7 @@ MonoBehaviour:
     m_Value: 0.55
   speed:
     m_OverrideState: 1
-    m_Value: 0.04
+    m_Value: 2.54
   mask:
     m_OverrideState: 0
     m_Value: {fileID: 0}

@@ -72,6 +72,9 @@ public class GameManager : MonoBehaviour
         {
             globalHoldTime += Time.deltaTime;
             noFSRTime = 0f; // Reset the no-FSR timer when any FSR is active
+
+            // For now, advance the background color
+            ColorChanger.S.ShiftHue();
         }
         else
         {

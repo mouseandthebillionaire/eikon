@@ -16,15 +16,12 @@ public class ShapeScript : MonoBehaviour
     [Header("Rotation Animation")]
     [SerializeField] private bool enableRotationAnimation = true;
     [SerializeField] private Vector3 baseRotation;
-    [SerializeField] private float rotationRate = 90f; // degrees per second
+    [SerializeField] private float rotationRate = 90f;
     
-
-    // Shape Animation
     private SpriteRenderer sr;
     private Sprite[] frames;
     public float frameRate = 10f;
 
-    // Runtime animation data
     private Vector3 targetScale;
     private Vector3 targetRotation;
     private float accumulatedRotation = 0f;
@@ -32,16 +29,13 @@ public class ShapeScript : MonoBehaviour
     private float returnStartRotation = 0f;
     private float returnTimeRemaining = 0f;
     
-    // Scale animation tracking
     private float scaleAccumulationTime = 0f;
     private Vector3 scaleReturnStart = Vector3.one;
     private float scaleReturnTimeRemaining = 0f;
     
-    // Current state
     private bool isActive = false;
     private float currentIntensity = 0f;
     
-    // Alpha control state (values from ShapeManager)
     private bool enableAlphaControl = true;
     private float inactiveAlpha = 0.1f;
     private float activeAlpha = 0.9f;
@@ -70,22 +64,15 @@ public class ShapeScript : MonoBehaviour
     
     private void InitializeShape()
     {
-        // Initialize scale
         targetScale = baseScale;
         transform.localScale = baseScale;
-        
-        // Initialize rotation - capture current transform rotation as base
         baseRotation = transform.localEulerAngles;
         targetRotation = baseRotation;
 
-        // Get Sprite Renderer
         sr = GetComponent<SpriteRenderer>();
-        // Get Frames
         frames = Resources.LoadAll<Sprite>("Circles");
-        // Start the Animation
         StartCoroutine(ShapeAnimation());
         
-        // Initialize alpha control
         if (enableAlphaControl && sr != null)
         {
             targetAlpha = inactiveAlpha;
@@ -99,12 +86,9 @@ public class ShapeScript : MonoBehaviour
     {
         if (assignedFSR == null && autoFindFSR)
         {
-            // Try to find an FSR in the scene
             FSR[] fsrs = FindObjectsOfType<FSR>();
             if (fsrs.Length > 0)
             {
-                // For now, assign the first available FSR
-                // Later we can implement random assignment
                 assignedFSR = fsrs[0];
             }
         }
@@ -134,7 +118,7 @@ public class ShapeScript : MonoBehaviour
     {
         if (fsr == assignedFSR)
         {
-            currentIntensity = sensorData.normalizedValue;
+            currentIntensity = fsr.modifiedForce;
         }
     }
     
@@ -146,16 +130,10 @@ public class ShapeScript : MonoBehaviour
         }
     }
     
-    // FSR Assignment Methods
     public void AssignFSR(FSR fsr)
     {
-        // Unsubscribe from current FSR if any
         UnsubscribeFromFSREvents();
-        
-        // Assign new FSR
         assignedFSR = fsr;
-        
-        // Subscribe to new FSR events
         if (assignedFSR != null)
         {
             SubscribeToFSREvents();
@@ -177,7 +155,8 @@ public class ShapeScript : MonoBehaviour
         }
     }
 
-    private IEnumerator ShapeAnimation(){
+    private IEnumerator ShapeAnimation()
+    {
         int currentFrame = Random.Range(0, frames.Length);
         sr.sprite = frames[currentFrame];
         yield return new WaitForSeconds(1f / frameRate);
@@ -190,45 +169,41 @@ public class ShapeScript : MonoBehaviour
         
         if (isActive)
         {
-            targetScale = Vector3.Lerp(baseScale, maxScale, currentIntensity);
-            scaleAccumulationTime += Time.deltaTime;
+            float maxExpectedForce = 3.5f;
+            float normalizedIntensity = Mathf.Clamp01(currentIntensity / maxExpectedForce);
+            normalizedIntensity = Mathf.Pow(normalizedIntensity, 0.7f);
             
-            // Reset scale return state when becoming active
+            targetScale = Vector3.Lerp(baseScale, maxScale, normalizedIntensity);
+            scaleAccumulationTime += Time.deltaTime;
             scaleReturnTimeRemaining = 0f;
             
-            // Apply scale normally during active state
             transform.localScale = Vector3.Lerp(transform.localScale, targetScale, Time.deltaTime * animationSpeed);
         }
         else
         {
-            // Start scale return animation if we have accumulated scale and haven't started returning yet
             if (scaleAccumulationTime > 0f && scaleReturnTimeRemaining <= 0f)
             {
                 scaleReturnStart = transform.localScale;
-                scaleReturnTimeRemaining = scaleAccumulationTime; // Use the same time it took to accumulate
+                scaleReturnTimeRemaining = scaleAccumulationTime;
             }
             
-            // Perform linear scale return animation
             if (scaleReturnTimeRemaining > 0f)
             {
                 scaleReturnTimeRemaining -= Time.deltaTime;
                 
                 if (scaleReturnTimeRemaining <= 0f)
                 {
-                    // Return complete - set directly to base scale
                     transform.localScale = baseScale;
                     scaleAccumulationTime = 0f;
                 }
                 else
                 {
-                    // Linear interpolation from start to base scale over the remaining time
                     float progress = 1f - (scaleReturnTimeRemaining / scaleAccumulationTime);
                     transform.localScale = Vector3.Lerp(scaleReturnStart, baseScale, progress);
                 }
             }
             else
             {
-                // No return animation needed, just set to base scale
                 transform.localScale = baseScale;
             }
         }
@@ -240,43 +215,35 @@ public class ShapeScript : MonoBehaviour
         
         if (isActive)
         {
-            // Continuously add rotation based on force intensity
             accumulatedRotation += rotationRate * currentIntensity * Time.deltaTime;
             accumulationTime += Time.deltaTime;
-            
-            // Reset return state when becoming active
             returnTimeRemaining = 0f;
         }
         else
         {
-            // Start return animation if we have accumulated rotation and haven't started returning yet
             if (accumulatedRotation > 0f && returnTimeRemaining <= 0f)
             {
                 returnStartRotation = accumulatedRotation;
-                returnTimeRemaining = accumulationTime; // Use the same time it took to accumulate
+                returnTimeRemaining = accumulationTime;
             }
             
-            // Perform linear return animation
             if (returnTimeRemaining > 0f)
             {
                 returnTimeRemaining -= Time.deltaTime;
                 
                 if (returnTimeRemaining <= 0f)
                 {
-                    // Return complete
                     accumulatedRotation = 0f;
                     accumulationTime = 0f;
                 }
                 else
                 {
-                    // Linear interpolation from start to zero over the remaining time
                     float progress = 1f - (returnTimeRemaining / accumulationTime);
                     accumulatedRotation = returnStartRotation * (1f - progress);
                 }
             }
         }
         
-        // Apply the accumulated rotation to the base rotation
         targetRotation = baseRotation + new Vector3(0f, 0f, accumulatedRotation);
         transform.localEulerAngles = targetRotation;
     }
@@ -285,10 +252,8 @@ public class ShapeScript : MonoBehaviour
     {
         if (!enableAlphaControl || sr == null || assignedFSR == null) return;
         
-        // Check if FSR's currentHold value exceeds threshold
         bool shouldBeActivated = assignedFSR.currentHoldTime > currentHoldThreshold;
         
-        // Update target alpha based on threshold
         if (shouldBeActivated && !isAlphaActivated)
         {
             targetAlpha = activeAlpha;
@@ -300,13 +265,11 @@ public class ShapeScript : MonoBehaviour
             isAlphaActivated = false;
         }
         
-        // Smoothly transition to target alpha
         Color currentColor = sr.color;
         currentColor.a = Mathf.Lerp(currentColor.a, targetAlpha, Time.deltaTime * alphaTransitionSpeed);
         sr.color = currentColor;
     }
     
-    // Public API for external control
     public void SetScaleAnimation(bool enabled)
     {
         enableScaleAnimation = enabled;
@@ -358,7 +321,6 @@ public class ShapeScript : MonoBehaviour
         animationSpeed = speed;
     }
     
-    // Alpha control API - receives settings from ShapeManager
     public void SetAlphaSettings(bool enabled, float inactive, float active, float threshold, float speed)
     {
         enableAlphaControl = enabled;
@@ -370,12 +332,11 @@ public class ShapeScript : MonoBehaviour
         if (!enabled && sr != null)
         {
             Color currentColor = sr.color;
-            currentColor.a = 1f; // Reset to full opacity
+            currentColor.a = 1f;
             sr.color = currentColor;
         }
         else if (enabled && sr != null)
         {
-            // Update target alpha based on current state
             targetAlpha = isAlphaActivated ? activeAlpha : inactiveAlpha;
         }
     }
