@@ -177,6 +177,41 @@ Next:
 - Experiment with shorter, more obtuse text for the koans
 - Add found sounds?
 
+## 11.20.25 | Rewritten Koans
+
+I have broken up the koans to be shorter, but I'm not sure how I feel about it. They're definitely thought-provoking, but now because I've switched the middle section from being Han's description of society's faults ("We take notice of everything without gaining any insight") to a more prescriptive voice ("take notice of everything," "gain no insight") it reads as this unreliable narrator. I kind of like it? It's weird? It'll work for now
+
+- the habit of perceiving reality
+- attraction and surprise
+- increasingly intangible
+- cloudlike
+- ghostly 
+- linger on information
+- relevant only fleetingly
+- information does not illuminate
+- pursue information
+- gain no knowledge
+- take notice of everything
+- gain no insight
+- travel across the world
+- having no experience
+- communicate incessantly
+- don't participate in community
+- collect vast quantities of data
+- don't following up on recollections
+- accumulate friends and followers
+- don't meet an other
+- a machine does not free the hand from work
+- an informaton
+- we prefer experiencing to possessing
+- we prefer being to having
+- the more I experience, the more I am 
+- fate has no place in the digital order 
+- without bodily touch, no ties can emerge 
+- the time of things is past 
+- through swiping, I submit the world to my needs 
+- the truly beautiful cannot be touched
+- it demands distance
 
 ---
 ## Notes
@@ -186,4 +221,4 @@ Next:
 [^3]: If I've learned one thing from teaching, it's don't count on things to work out down the road...
 [^4]: The whole thing also feels very [Digital Yoga](https://github.com/mouseandthebillionaire/digitalYoga) which is a fun throwback - if only just for me
 [^5]: Fingers crossed 
-[^6]: Except that one little tine one because I fried my 6th larger FSR trying to solder directly to it!
+[^6]: Except that one little tiny one because I fried my 6th larger FSR trying to solder directly to it!
