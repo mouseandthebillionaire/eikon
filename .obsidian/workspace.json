@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "Process/Journal.md",
-                "mode": "preview",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
@@ -171,6 +171,11 @@
   },
   "active": "f45619208928840c",
   "lastOpenFiles": [
+    "Process/Media/whaaatShowcase.jpg",
+    "Process/Journal.md",
+    "Process/Media/hardware3.jpeg.sb-0529dae0-icem9d",
+    "Process/Media/hardware3.jpeg",
+    "Process/Media/IMG_2680.jpeg",
     "Temp/ADB-Refresh3b90f110e30fd4d8991f4ff110f770f6",
     "Temp/ADB-Refresh47aa66c86bf8746db857617051702b2b",
     "Temp/ADB-Refresh607c6068c363444469d9a219ebb4a5aa",
@@ -180,12 +185,8 @@
     "Temp/Burst/burst-aotcru2faxb.djg",
     "Temp/Burst/burst-aotev7rf3r8.dzk",
     "Temp/Burst/burst-aotlkr1b6hm.6eo",
-    "Temp/Burst/burst-aotvkngd2nu.rai",
-    "Temp/Burst/burst-aot28cjpc7c.gxm",
     "().md",
-    "Process/Journal.md",
     "Media/whaaat.md",
-    "Process/Media/whaaatShowcase.jpg",
     "README.md",
     "COMPILATION_FIX_GUIDE.md",
     "ERROR_LOGGING_SETUP.md",
@@ -197,8 +198,6 @@
     "Process/Media/IMG_2641.jpeg",
     "Assets/Sprites/04_01.png",
     "Assets/Scripts/PiController_Wiring.md",
-    "Assets/Resources/9/main.png",
-    "Assets/Resources/9/4.png",
     "Tools/venv/lib/python3.13/site-packages/numpy/random/LICENSE.md",
     "README_frame_extractor.md"
   ]

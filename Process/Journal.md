@@ -161,6 +161,23 @@ I have been invited to show a thing at the [Radio Snack] birthday party event, s
 
 Onward!
 
+## 11.20.25 | New Hardware
+
+![Third Version of Hardware](Media/hardware3.jpeg)
+
+Rebuilt the hardware side of this into an old cigar box. This makes it possible for me to hide the electronic inside, which is obviously a slicker presentation. Doesn't read prie-dieu to me as much as the plank of wood did, but overall better. Upgraded the FSRs to the larger ones, which creates a more responsive experience.[^6]
+
+Thinking about the user-experience with this - specifically with getting folks to "touch" it rather than "poke" it - and ND suggested adding material on top that suggested movement or progression. In other words, if there was a paisley fabric on top of this, or a fabric printed with the image of a [medieval labyrinth](https://www.janeclayton.co.uk/media/catalog/product/cache/04f3c6c3e6655e7be184d6c72b803cfa/l/a/labyrinth-zinc-hunting-fabric-z801-04-image01.jpg) would that encourage the proper movement? And I think it would! So next steps is thinking about what fabric exactly to use. The one linked above is clearly great, but there's no time to wait for that to arrive! Worst case scenario, I use sharpie on the faux leather I already have (haha), but maybe there's time to stitch something together? Embroider a thing? Either way, that might be a good route to go eventually.
+
+Next:
+- Sketch out possible designs for the top
+- Attach the covering. In talking with ND, he suggested removing the neoprene, but these new FSRs work so well, that it actually works better to keep the neoprene on there. I might test with other material to see what we get, but with the limited time I have, that might have to wait for later
+- The repetitive chimes are too fast. Need to separate them out more
+- Everything might be too fast?
+- Experiment with shorter, more obtuse text for the koans
+- Add found sounds?
+
+
 ---
 ## Notes
 
@@ -169,3 +186,4 @@ Onward!
 [^3]: If I've learned one thing from teaching, it's don't count on things to work out down the road...
 [^4]: The whole thing also feels very [Digital Yoga](https://github.com/mouseandthebillionaire/digitalYoga) which is a fun throwback - if only just for me
 [^5]: Fingers crossed 
+[^6]: Except that one little tine one because I fried my 6th larger FSR trying to solder directly to it!
