@@ -105,7 +105,7 @@ MonoBehaviour:
   enableScaleAnimation: 1
   baseScale: {x: 0.5, y: 0.5, z: 1}
   maxScale: {x: 10, y: 10, z: 1.2}
-  animationSpeed: 0.05
+  animationSpeed: 0.025
   enableRotationAnimation: 1
   baseRotation: {x: 0, y: 0, z: 0}
   rotationRate: 5

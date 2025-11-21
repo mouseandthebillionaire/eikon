@@ -119,7 +119,6 @@ public class ShapeManager : MonoBehaviour
                         // Assign the FSR to the shape
                         shapeScript.AssignFSR(assignedFSR);
                         
-                        Debug.Log($"Shape {shapeIndex} (Row {row}, Col {col}) assigned to FSR: {assignedFSR.name}");
                     }
                     
                     // Set alpha settings from ShapeManager
@@ -193,20 +192,17 @@ public class ShapeManager : MonoBehaviour
             int fsrIndex = fsrIndices[i % fsrIndices.Count];
             FSR assignedFSR = availableFSRs[fsrIndex];
             shapes[i].AssignFSR(assignedFSR);
-            Debug.Log($"Reassigned Shape {i} to FSR: {assignedFSR.name}");
         }
     }
     
     public void LogCurrentAssignments()
     {
         ShapeScript[] shapes = GetComponentsInChildren<ShapeScript>();
-        Debug.Log("=== Current FSR Assignments ===");
         
         for (int i = 0; i < shapes.Length; i++)
         {
             FSR assignedFSR = shapes[i].GetAssignedFSR();
             string fsrName = assignedFSR != null ? assignedFSR.name : "None";
-            Debug.Log($"Shape {i}: {shapes[i].name} -> FSR: {fsrName}");
         }
     }
     
@@ -235,7 +231,6 @@ public class ShapeManager : MonoBehaviour
             shape.SetBaseScale(baseScale);
             shape.SetMaxScale(maxScale);
         }
-        Debug.Log($"Updated scale values for {shapes.Length} shapes. Base: {baseScale}, Max: {maxScale}");
     }
     
     [ContextMenu("Randomize All Shape Positions")]

@@ -10,12 +10,7 @@ public class GameManager : MonoBehaviour
     
     [Header("FSR Current Hold Times")]
     // Public currentHoldTime variables for each FSR (0-5)
-    public float fsr0CurrentHoldTime = 0f;
-    public float fsr1CurrentHoldTime = 0f;
-    public float fsr2CurrentHoldTime = 0f;
-    public float fsr3CurrentHoldTime = 0f;
-    public float fsr4CurrentHoldTime = 0f;
-    public float fsr5CurrentHoldTime = 0f;
+    public float[] fsrCurrentHoldTimes = new float[6];
 
     public bool fsrsTriggered = false;
     public float globalHoldTime = 0f;
@@ -39,12 +34,10 @@ public class GameManager : MonoBehaviour
         FSR[] fsrComponents = FindObjectsOfType<FSR>();
         
         // Update public currentHoldTime variables for each FSR
-        if (fsrComponents.Length > 0) fsr0CurrentHoldTime = fsrComponents[0].currentHoldTime;
-        if (fsrComponents.Length > 1) fsr1CurrentHoldTime = fsrComponents[1].currentHoldTime;
-        if (fsrComponents.Length > 2) fsr2CurrentHoldTime = fsrComponents[2].currentHoldTime;
-        if (fsrComponents.Length > 3) fsr3CurrentHoldTime = fsrComponents[3].currentHoldTime;
-        if (fsrComponents.Length > 4) fsr4CurrentHoldTime = fsrComponents[4].currentHoldTime;
-        if (fsrComponents.Length > 5) fsr5CurrentHoldTime = fsrComponents[5].currentHoldTime;
+        for (int i = 0; i < fsrComponents.Length; i++)
+        {
+            fsrCurrentHoldTimes[i] = fsrComponents[i].currentHoldTime;
+        }
         
         timeVariables[0] = fsrComponents[0].timeHeld + fsrComponents[4].timeHeld;
         timeVariables[1] = fsrComponents[1].timeHeld + fsrComponents[5].timeHeld;
@@ -96,16 +89,26 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        // Check if any individual FSR has been held long enough
-        if(fsrComponents[0].currentHoldTime > triggerTime ||
-           fsrComponents[1].currentHoldTime > triggerTime ||
-           fsrComponents[2].currentHoldTime > triggerTime ||
-           fsrComponents[3].currentHoldTime > triggerTime ||
-           fsrComponents[4].currentHoldTime > triggerTime ||
-           fsrComponents[5].currentHoldTime > triggerTime)
+        // // Check if any individual FSR has been held long enough
+        // if(fsrComponents[0].currentHoldTime > triggerTime ||
+        //    fsrComponents[1].currentHoldTime > triggerTime ||
+        //    fsrComponents[2].currentHoldTime > triggerTime ||
+        //    fsrComponents[3].currentHoldTime > triggerTime ||
+        //    fsrComponents[4].currentHoldTime > triggerTime ||
+        //    fsrComponents[5].currentHoldTime > triggerTime)
+        // {
+        //     TextManager.S.Koan();
+        //     AudioManager.S.PlayPhrase();
+        // }
+
+        // Versin 2: Check if Global Hold Time is greater than triggerTime
+        if(globalHoldTime > triggerTime)
         {
             TextManager.S.Koan();
             AudioManager.S.PlayPhrase();
+
+            // And then reset the global hold time
+            globalHoldTime = 0f;
         }
     }
 
