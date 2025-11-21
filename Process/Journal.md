@@ -213,6 +213,19 @@ I have broken up the koans to be shorter, but I'm not sure how I feel about it. 
 - the truly beautiful cannot be touched
 - it demands distance
 
+
+## 11.21.25 | Material Ideation
+
+![Fabric Examples](Media/fabric.jpg)
+
+It would be nice to have an organic pattern and/or texture that the user could trace. It would be even _more_ nice if that texture actually translated to some sort of meaningful visual/sonic interaction, but for now, I think the illusion of linkage is enough. The image above is of a few fabrics that I found that I think communicate this nicely.
+
+![Sacred Geometry](Media/sacredGeometry.jpg)
+
+Sacred geometry is definitely another really good avenue for exploration here. It would be nice if I could find some material with these images already printed on them, but the cursory search I did online proved fruitless. As a backup I ordered a couple of [mousepads with topographic lines on them](https://www.amazon.ca/Large-Mouse-Pad-Desk-Line-23-6x11-8/dp/B0D3PVJ34C/ref=pd_day0_d_sccl_2_7/130-4265813-4313831?pd_rd_w=YnL7n&content-id=amzn1.sym.4531c9b5-9484-432d-bb61-13ea8c47decb&pf_rd_p=4531c9b5-9484-432d-bb61-13ea8c47decb&pf_rd_r=KWABE76TGRNV17HM9MNP&pd_rd_wg=MB3R3&pd_rd_r=50c5d81f-cea0-4eb1-abde-c1c6725d498f&pd_rd_i=B0CZNPNY5Y&th=1) that should do in a pinch. 
+
+For now, I'm going to go out and hit the Salvation Army to scour their collection of old people clothes and upholstered furniture and hope that I strike gold!
+
 ---
 ## Notes
 
