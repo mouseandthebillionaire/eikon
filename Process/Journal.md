@@ -226,6 +226,12 @@ Sacred geometry is definitely another really good avenue for exploration here. I
 
 For now, I'm going to go out and hit the Salvation Army to scour their collection of old people clothes and upholstered furniture and hope that I strike gold!
 
+## 11.22.25 | V3
+
+![Eikon - Version 3](Media/v3.jpeg)
+
+The mouse pads ended up being the best solution here as far as visuals plus texture. Most of these shapes line up to where the FSRs are which is nice. I especially like the little island in the upper left hand corner that aligns with the small FSR. I am debating adding some more marks (specifically in the upper right corner) to indicate where the pressing should happen, but not sure if it is necessary. The Radio Snack showcase is tonight, and hopefully it goes over well enough. Bringing headphones and a headphone amp to make sure it can be heard over what I assume will be a lot of noise. We'll see!
+ 
 ---
 ## Notes
 
