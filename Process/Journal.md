@@ -231,7 +231,19 @@ For now, I'm going to go out and hit the Salvation Army to scour their collectio
 ![Eikon - Version 3](Media/v3.jpeg)
 
 The mouse pads ended up being the best solution here as far as visuals plus texture. Most of these shapes line up to where the FSRs are which is nice. I especially like the little island in the upper left hand corner that aligns with the small FSR. I am debating adding some more marks (specifically in the upper right corner) to indicate where the pressing should happen, but not sure if it is necessary. The Radio Snack showcase is tonight, and hopefully it goes over well enough. Bringing headphones and a headphone amp to make sure it can be heard over what I assume will be a lot of noise. We'll see!
- 
+
+## 12.01.25 | V3 Exhibition Thoughts
+
+Spent the last week reflecting on the Radio Snack exhibition, and just wanted to jot down some thoughts. It went fairly well. A dozen or so people spent some time with the project, and I think generally the reactions were far more positive than they had been at Whaaat!?. I'm not sure if this audience was more receptive to the ideas, or if it was the changes that I had made, but either way, a better showing. 
+
+I will say that the patterned covering on the box definitely seems like a better fit. People were much more inclined to _place_ their fingers (rather than poke), but again, not sure if this is an audience thing or a form-factor thing. Additionally, I changed the description text slightly, and that seemed to better instruct? Addressing "you" rather than "the player" is a better fit in the exhibition context, perhaps?
+
+>_Eikon_ is a playful study in how the physical interfaces of games can be objects of an vehicles for contemplation. Rest your hands on the box. Explore the contours of the interface and apply varying degrees of pressure as an ever-shifting field of minimalist visuals unfolds alongside a layered ambient soundscape. 
+
+>The experience recalls the ritualistic presence of ceremonial objects - prayer candles, tea ceremonies, stained glass, mandalas, idols - objects that center attention and open a space for reflecting on something beyond the immediate world.
+
+This feels like a good final stage for this. I can see future projects that build on these ideas, but as far as the experiment of creating an experience that foregrounds ambience, subtle movements, and a time requirement? Done and done.
+
 ---
 ## Notes
 
