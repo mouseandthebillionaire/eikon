@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Process/Journal.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Journal"
+              "title": "README"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Process/Journal.md",
+                "file": "README.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Journal"
+              "title": "Outline of README"
             }
           }
         ],
@@ -171,6 +171,10 @@
   },
   "active": "f45619208928840c",
   "lastOpenFiles": [
+    "Process/Journal.md",
+    "README.md",
+    "Process/Media/v3_1.jpeg",
+    "Process/Media/IMG_2686.jpeg",
     "Process/Media/v3.jpeg.sb-e0acad35-ckTWP5",
     "Process/Media/v3.jpeg",
     "Process/Media/IMG_2690.jpeg",
@@ -183,21 +187,16 @@
     "Temp/shader-stripping.json",
     "Library/Bee/buildreport.json_2.traceevents",
     "Library/Bee/backend4.traceevents",
-    "Library/Bee/artifacts/MacStandalonePlayerBuildProgram/HashCache/0.2.app-f0c8d45c.json",
     "Pasted image 20251121131331.png",
     "Process/Media/sacredGeometry.jpg",
     "Process/Media/fabric.jpg",
     "Process/Media/whaaatShowcase.jpg",
-    "Process/Journal.md",
     "Process/Media/hardware3.jpeg",
     "Process/Media/IMG_2680.jpeg",
     "().md",
     "Media/whaaat.md",
-    "README.md",
     "COMPILATION_FIX_GUIDE.md",
     "ERROR_LOGGING_SETUP.md",
-    "Process/Media/hardware2.jpg",
-    "Temp/Burst/burst-aot19mjg7sm.png",
     "Assets/Scripts/PiController_Wiring.md",
     "Tools/venv/lib/python3.13/site-packages/numpy/random/LICENSE.md",
     "README_frame_extractor.md"

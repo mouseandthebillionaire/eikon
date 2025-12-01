@@ -1,6 +1,10 @@
-# eikon
+# Eikon
 
-_Eikon_ is a playful exploration in how the physical interfaces of games can be objects of and vehicles for contemplation. Players place their hands on a simple-looking board that can sense the degree of force applied at certain points. By slowly moving their fingers, exploring the contours of the interface, and applying varying degrees of pressure, they are presented with an ever-changing array of abstract minimalist visuals and a complex ambient soundscape. The entire experience echoes the ritualistic aspects of ceremonial objects (prayer candles, tea ceremonies, stained-glass, mandalas, idols, etc) and how they can be used to point out to something larger about the external world. 
+![Eikon Physical Interface](Media/v3_1.jpeg)
+
+_Eikon_ is a playful study in how the physical interfaces of games can be objects of an vehicles for contemplation. Rest your hands on the box. Explore the contours of the interface and apply varying degrees of pressure as an ever-shifting field of minimalist visuals unfolds alongside a layered ambient soundscape. 
+
+The experience recalls the ritualistic presence of ceremonial objects - prayer candles, tea ceremonies, stained glass, mandalas, idols - objects that center attention and open a space for reflecting on something beyond the immediate world.
 
 ## Miscellaneous Material
 * [Process Documentation](Process/Journal.md)
