@@ -101,15 +101,28 @@ public class GameManager : MonoBehaviour
         //     AudioManager.S.PlayPhrase();
         // }
 
-        // Versin 2: Check if Global Hold Time is greater than triggerTime
-        if(globalHoldTime > triggerTime)
-        {
-            TextManager.S.Koan();
-            AudioManager.S.PlayPhrase();
+        // Version 2: Check if Global Hold Time is greater than triggerTime
+        // if(globalHoldTime > triggerTime)
+        // {
+        //     TextManager.S.Koan();
+        //     AudioManager.S.PlayPhrase();
 
-            // And then reset the global hold time
-            globalHoldTime = 0f;
+        //     // And then reset the global hold time
+        //     globalHoldTime = 0f;
+        // }
+
+        // Version 3 is controlled by the Floor Manager when the marble hits the floor
+    }
+
+    public void AdvanceStage(){
+        // find all the rings in the scene
+        Ring[] rings = FindObjectsOfType<Ring>();
+        foreach(Ring ring in rings){
+            StartCoroutine(ring.ResetRing());
         }
+        StartCoroutine(Marble.S.ResetMarble());
+        TextManager.S.Koan();
+        AudioManager.S.PlayPhrase();
     }
 
     void Reset(){

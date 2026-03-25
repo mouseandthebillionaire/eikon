@@ -120,20 +120,9 @@ public class FSR : MonoBehaviour
     private void HandleKeyboardInput()
     {
         bool keyPressed = Input.GetKey(testKey);
-        
-        if (keyPressed != isKeyboardPressed)
-        {
-            isKeyboardPressed = keyPressed;
-            
-            if (keyPressed)
-            {
-                SimulateSensorInput(1.0f);
-            }
-            else
-            {
-                SimulateSensorInput(0.0f);
-            }
-        }
+        isKeyboardPressed = keyPressed;
+        // Apply every frame while held so simulated value isn't overwritten by Arduino/ForceSensorManager updates
+        SimulateSensorInput(keyPressed ? 1.0f : 0.0f);
     }
     
     private void SimulateSensorInput(float normalizedValue)
